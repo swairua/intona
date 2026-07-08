@@ -35,9 +35,7 @@ export function PartnersSection() {
     <section className="py-16 sm:py-20 md:py-24 partners-section">
       <Container>
         <div className="text-center mb-12 sm:mb-16">
-          <Heading level="h2" className="mb-4">
-            Our Trusted Partners
-          </Heading>
+          <Heading title="Our Trusted Partners" />
           <p className="text-base sm:text-lg text-secondary max-w-2xl mx-auto">
             We work with leading government institutions and organizations to deliver quality infrastructure and construction solutions across Kenya.
           </p>
