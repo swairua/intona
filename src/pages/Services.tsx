@@ -29,7 +29,7 @@ export default function Services() {
   return (
     <>
       <SEO title="Services" description="Comprehensive construction and engineering services by Intona Constructions Ltd." />
-      <div className="pt-24 md:pt-28">
+      <div className="pt-20 sm:pt-24 md:pt-28">
         <Section bgColor="bg-surface">
           <Container>
             <motion.div
@@ -37,8 +37,8 @@ export default function Services() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-3xl sm:text-4xl md:text-6xl font-black text-accent mb-4">Our Services</h1>
-              <p className="text-base sm:text-lg md:text-xl text-secondary max-w-2xl">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-accent mb-4">Our Services</h1>
+              <p className="text-base sm:text-lg md:text-xl text-secondary max-w-2xl leading-relaxed">
                 End-to-end construction and engineering solutions tailored to your project needs.
               </p>
             </motion.div>

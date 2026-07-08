@@ -34,11 +34,11 @@ export function ContactForm() {
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="bg-white rounded-3xl p-8 md:p-10 border border-border shadow-sm text-center"
+        className="bg-white rounded-3xl p-6 sm:p-8 md:p-10 border border-border shadow-sm text-center"
       >
-        <CheckCircle2 className="w-16 h-16 text-green-500 mx-auto mb-4" />
-        <h3 className="text-2xl font-bold text-accent mb-2">Message Sent!</h3>
-        <p className="text-secondary">Thank you for reaching out. We'll get back to you within 24 hours.</p>
+        <CheckCircle2 className="w-14 sm:w-16 h-14 sm:h-16 text-green-500 mx-auto mb-4" />
+        <h3 className="text-xl sm:text-2xl font-bold text-accent mb-2">Message Sent!</h3>
+        <p className="text-sm sm:text-base text-secondary">Thank you for reaching out. We'll get back to you within 24 hours.</p>
       </motion.div>
     )
   }
@@ -49,11 +49,11 @@ export function ContactForm() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       onSubmit={handleSubmit(onSubmit)}
-      className="bg-white rounded-3xl p-8 md:p-10 border border-border shadow-sm"
+      className="bg-white rounded-3xl p-6 sm:p-8 md:p-10 border border-border shadow-sm"
     >
-      <h3 className="text-2xl font-bold text-accent mb-6">Send Us a Message</h3>
-      <div className="space-y-5">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+      <h3 className="text-xl sm:text-2xl font-bold text-accent mb-5 sm:mb-6">Send Us a Message</h3>
+      <div className="space-y-4 sm:space-y-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
           <Input id="name" label="Full Name" placeholder="Your name" error={errors.name?.message} {...register('name')} />
           <Input id="email" type="email" label="Email Address" placeholder="your@email.com" error={errors.email?.message} {...register('email')} />
         </div>

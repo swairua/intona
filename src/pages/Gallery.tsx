@@ -10,7 +10,7 @@ export default function Gallery() {
   return (
     <>
       <SEO title="Gallery" description="View our project gallery showcasing construction excellence across sectors." />
-      <div className="pt-24 md:pt-28">
+      <div className="pt-20 sm:pt-24 md:pt-28">
         <Section bgColor="bg-surface">
           <Container>
             <motion.div
@@ -18,8 +18,8 @@ export default function Gallery() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-4xl md:text-6xl font-black text-accent mb-4">Gallery</h1>
-              <p className="text-xl text-secondary max-w-2xl">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-accent mb-4">Gallery</h1>
+              <p className="text-base sm:text-lg md:text-xl text-secondary max-w-2xl leading-relaxed">
                 A visual journey through our projects and operations.
               </p>
             </motion.div>

@@ -16,7 +16,7 @@ export default function Equipment() {
   return (
     <>
       <SEO title="Equipment" description="Explore our fleet of modern construction machinery and equipment." />
-      <div className="pt-24 md:pt-28">
+      <div className="pt-20 sm:pt-24 md:pt-28">
         <Section bgColor="bg-surface">
           <Container>
             <motion.div
@@ -24,8 +24,8 @@ export default function Equipment() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-3xl sm:text-4xl md:text-6xl font-black text-accent mb-4">Our Equipment</h1>
-              <p className="text-base sm:text-lg md:text-xl text-secondary max-w-2xl">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-accent mb-4">Our Equipment</h1>
+              <p className="text-base sm:text-lg md:text-xl text-secondary max-w-2xl leading-relaxed">
                 Modern machinery fleet for efficient and quality project execution.
               </p>
             </motion.div>
@@ -39,7 +39,7 @@ export default function Equipment() {
             title="Construction Machinery"
             subtitle="State-of-the-art equipment to handle projects of any scale and complexity."
           />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
             {equipment.map((item, i) => (
               <EquipmentCard key={item.id} item={item} index={i} />
             ))}
