@@ -25,8 +25,8 @@ export default function Careers() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-4xl md:text-6xl font-black text-accent mb-4">Careers</h1>
-              <p className="text-xl text-secondary max-w-2xl">
+              <h1 className="text-3xl sm:text-4xl md:text-6xl font-black text-accent mb-4">Careers</h1>
+              <p className="text-base sm:text-lg md:text-xl text-secondary max-w-2xl">
                 Build your career with a company that values excellence, innovation and people.
               </p>
             </motion.div>
@@ -55,7 +55,7 @@ export default function Careers() {
                       </li>
                     ))}
                   </ul>
-                  <Button size="sm" onClick={() => setSelected(selected === vacancy.id ? null : vacancy.id)}>
+                  <Button size="md" onClick={() => setSelected(selected === vacancy.id ? null : vacancy.id)}>
                     {selected === vacancy.id ? 'Close' : 'Apply Now'}
                   </Button>
                 </div>
