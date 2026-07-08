@@ -25,6 +25,7 @@ export function Heading({ title, subtitle, centered = true, light = false, class
       <h2 className={cn(
         'text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold tracking-tight',
         light ? 'text-white' : 'text-accent',
+        'bg-clip-text',
       )}>
         {title}
       </h2>

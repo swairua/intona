@@ -13,8 +13,8 @@ export function Footer() {
     <footer className="bg-accent text-white relative">
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-primary-light to-primary" />
 
-      <Container className="py-12 sm:py-16 md:py-20">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-10 lg:gap-8">
+      <Container className="py-12 sm:py-16 md:py-24">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-10 lg:gap-8 lg:gap-12">
           <div className="sm:col-span-2 lg:col-span-2">
             <Link to="/" className="inline-block mb-6 h-14 sm:h-16">
               <img
@@ -26,7 +26,7 @@ export function Footer() {
             <p className="text-gray-400 text-sm leading-relaxed mb-6 max-w-md">
               {COMPANY.description}
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-2 gap-4 sm:gap-4">
               {[
                 { icon: MapPin, label: 'Address', value: COMPANY.address },
                 { icon: Phone, label: 'Phone', value: COMPANY.phone, href: `tel:${COMPANY.phone}` },
@@ -89,13 +89,13 @@ export function Footer() {
             <p className="text-gray-400 text-xs sm:text-sm mb-4">
               Subscribe for project updates and industry insights.
             </p>
-            <form onSubmit={(e) => e.preventDefault()} className="flex gap-2">
+            <form onSubmit={(e) => e.preventDefault()} className="flex gap-2 flex-col sm:flex-row">
               <input
                 type="email"
                 placeholder="Your email"
                 className="flex-1 px-3 sm:px-4 py-2 sm:py-3 rounded-lg sm:rounded-xl bg-white/10 border border-white/20 text-white placeholder:text-gray-500 text-xs sm:text-sm focus:outline-none focus:border-primary"
               />
-              <Button type="submit" size="sm" className="shrink-0">
+              <Button type="submit" size="sm" className="shrink-0 w-full sm:w-auto">
                 <Send className="w-4 h-4" />
               </Button>
             </form>
@@ -128,9 +128,9 @@ export function Footer() {
       </Container>
 
       <div className="border-t border-white/10">
-        <Container className="py-4 sm:py-6">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
-            <p className="text-xs sm:text-sm text-gray-500 text-center sm:text-left">
+        <Container className="py-6 sm:py-8">
+          <div className="flex flex-col gap-4 sm:gap-6">
+            <p className="text-xs sm:text-sm text-gray-500 text-center">
               &copy; {new Date().getFullYear()} {COMPANY.name}. All rights reserved.
             </p>
             <div className="flex items-center gap-4 sm:gap-6 text-xs sm:text-sm text-gray-500 flex-wrap justify-center">
@@ -139,7 +139,7 @@ export function Footer() {
             </div>
             <button
               onClick={scrollToTop}
-              className="text-xs sm:text-sm text-gray-500 hover:text-primary transition-colors flex items-center gap-1"
+              className="text-xs sm:text-sm text-gray-500 hover:text-primary transition-colors flex items-center justify-center gap-1"
             >
               Back to top
               <ArrowUpRight className="w-3 h-3" />

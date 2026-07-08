@@ -16,10 +16,10 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         disabled={disabled || loading}
         className={cn(
           'inline-flex items-center justify-center font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed',
-          variant === 'primary' && 'bg-primary text-white hover:bg-primary-dark shadow-lg hover:shadow-xl active:scale-[0.98]',
-          variant === 'outline' && 'border-2 border-primary text-primary hover:bg-primary hover:text-white',
-          variant === 'ghost' && 'text-secondary hover:text-primary hover:bg-gray-100',
-          variant === 'secondary' && 'bg-accent text-white hover:bg-secondary shadow-lg',
+          variant === 'primary' && 'bg-primary text-white hover:bg-primary-dark shadow-lg hover:shadow-2xl hover:-translate-y-0.5 active:scale-[0.98]',
+          variant === 'outline' && 'border-2 border-primary text-primary hover:bg-primary hover:text-white hover:shadow-lg',
+          variant === 'ghost' && 'text-secondary hover:text-primary hover:bg-gray-100 rounded-lg',
+          variant === 'secondary' && 'bg-accent text-white hover:bg-secondary shadow-lg hover:shadow-xl hover:-translate-y-0.5',
           size === 'sm' && 'px-3 py-2 text-sm rounded-lg min-h-10',
           size === 'md' && 'px-6 py-3 text-base rounded-lg min-h-12',
           size === 'lg' && 'px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-xl min-h-12 sm:min-h-14',

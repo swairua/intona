@@ -18,8 +18,8 @@ export function Card({ children, className, hover = true, delay = 0 }: CardProps
       transition={{ duration: 0.5, delay }}
       whileHover={hover ? { y: -6, transition: { duration: 0.3 } } : undefined}
       className={cn(
-        'bg-white rounded-2xl border border-border shadow-sm overflow-hidden transition-shadow duration-300',
-        hover && 'hover:shadow-xl',
+        'bg-white rounded-2xl border border-border shadow-sm overflow-hidden transition-all duration-300',
+        hover && 'hover:shadow-2xl hover:border-primary/30',
         className,
       )}
     >
