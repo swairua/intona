@@ -17,27 +17,27 @@ export function Heading({ title, subtitle, centered = true, light = false, class
       viewport={{ once: true, margin: '-100px' }}
       transition={{ duration: 0.6 }}
       className={cn(
-        'mb-12 md:mb-16',
+        'mb-8 sm:mb-12 md:mb-16',
         centered && 'text-center',
         className,
       )}
     >
       <h2 className={cn(
-        'text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight',
+        'text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold tracking-tight',
         light ? 'text-white' : 'text-accent',
       )}>
         {title}
       </h2>
       {subtitle && (
         <p className={cn(
-          'mt-4 max-w-3xl mx-auto text-base sm:text-lg md:text-xl leading-relaxed',
+          'mt-3 sm:mt-4 max-w-3xl mx-auto text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed',
           light ? 'text-gray-300' : 'text-secondary',
         )}>
           {subtitle}
         </p>
       )}
       <div className={cn(
-        'mt-6 h-1 w-20 mx-auto rounded-full',
+        'mt-5 sm:mt-6 h-1 w-16 sm:w-20 rounded-full',
         centered ? 'mx-auto' : '',
         light ? 'bg-primary' : 'bg-primary',
       )} />

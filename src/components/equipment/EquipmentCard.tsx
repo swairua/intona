@@ -14,23 +14,23 @@ export function EquipmentCard({ item, index }: EquipmentCardProps) {
   return (
     <Card delay={index * 0.1}>
       <div className="aspect-[4/3] bg-surface flex items-center justify-center">
-        <Wrench className="w-16 h-16 text-secondary/30" />
+        <Wrench className="w-14 sm:w-16 h-14 sm:h-16 text-secondary/30" />
       </div>
-      <div className="p-5">
-        <div className="flex items-start justify-between mb-3">
-          <h3 className="text-lg font-bold text-accent">{item.name}</h3>
+      <div className="p-4 sm:p-5">
+        <div className="flex items-start justify-between gap-2 mb-2 sm:mb-3">
+          <h3 className="text-base sm:text-lg font-bold text-accent line-clamp-2">{item.name}</h3>
           <Badge variant={
             item.availability === 'available' ? 'success' : item.availability === 'rented' ? 'warning' : 'info'
-          }>
+          } className="text-xs whitespace-nowrap">
             {item.availability}
           </Badge>
         </div>
-        <p className="text-sm text-secondary mb-4">{item.description}</p>
-        <div className="space-y-2">
+        <p className="text-xs sm:text-sm text-secondary mb-3 sm:mb-4 line-clamp-2">{item.description}</p>
+        <div className="space-y-1.5 sm:space-y-2">
           {Object.entries(item.specifications).map(([key, value]) => (
-            <div key={key} className="flex justify-between text-sm">
-              <span className="text-secondary">{key}</span>
-              <span className="font-semibold text-accent">{value}</span>
+            <div key={key} className="flex justify-between text-xs sm:text-sm">
+              <span className="text-secondary truncate">{key}</span>
+              <span className="font-semibold text-accent ml-2 truncate">{value}</span>
             </div>
           ))}
         </div>

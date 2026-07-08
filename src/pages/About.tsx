@@ -23,19 +23,19 @@ const REASONS = [
 
 export function WhyChooseUs() {
   return (
-    <section className="py-16 md:py-24 bg-white">
+    <section className="py-12 sm:py-16 md:py-24 bg-white">
       <Container>
-        <div className="max-w-4xl mx-auto px-4 sm:px-0">
+        <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-12"
+            className="text-center mb-8 sm:mb-12"
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-accent">Why Choose Intona?</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-accent">Why Choose Intona?</h2>
             <div className="mt-4 h-1 w-20 bg-primary rounded-full mx-auto" />
           </motion.div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {REASONS.map((reason, i) => (
               <motion.div
                 key={reason.title}
@@ -43,14 +43,14 @@ export function WhyChooseUs() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="flex gap-4 p-6 rounded-2xl bg-surface hover:bg-primary/5 transition-colors"
+                className="flex gap-3 sm:gap-4 p-4 sm:p-6 rounded-2xl bg-surface hover:bg-primary/5 transition-colors"
               >
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
-                  <reason.icon className="w-6 h-6 text-primary" />
+                <div className="w-10 sm:w-12 h-10 sm:h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+                  <reason.icon className="w-5 sm:w-6 h-5 sm:h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-accent mb-1">{reason.title}</h3>
-                  <p className="text-sm text-secondary">{reason.description}</p>
+                  <h3 className="font-bold text-accent text-sm sm:text-base mb-1">{reason.title}</h3>
+                  <p className="text-xs sm:text-sm text-secondary">{reason.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -65,7 +65,7 @@ export default function About() {
   return (
     <>
       <SEO title="About Us" description="Learn about Intona Constructions Ltd's history, mission, team and certifications." />
-      <div className="pt-24 md:pt-28">
+      <div className="pt-20 sm:pt-24 md:pt-28">
         <Section bgColor="bg-surface">
           <Container>
             <motion.div
@@ -73,8 +73,8 @@ export default function About() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-3xl sm:text-4xl md:text-6xl font-black text-accent mb-4">About Us</h1>
-              <p className="text-base sm:text-lg md:text-xl text-secondary max-w-2xl">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-accent mb-4">About Us</h1>
+              <p className="text-base sm:text-lg md:text-xl text-secondary max-w-2xl leading-relaxed">
                 Building excellence since 2010 — a legacy of quality, innovation and trust.
               </p>
             </motion.div>

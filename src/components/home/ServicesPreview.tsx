@@ -23,25 +23,25 @@ export function ServicesPreview() {
     getServices().then(s => setServices(s.slice(0, 6))).catch(() => {})
   }, [])
   return (
-    <section className="py-16 md:py-24 bg-surface">
+    <section className="py-12 sm:py-16 md:py-24 bg-surface">
       <Container>
         <Heading
           title="Our Services"
           subtitle="Comprehensive construction and engineering solutions delivered with precision and excellence."
         />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {services.map((service, i) => {
             const Icon = getIcon(service.icon)
             return (
               <Card key={service.id} delay={i * 0.1}>
                 <div className="h-2 bg-gradient-to-r from-primary/20 to-primary/5" />
-                <div className="p-6">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                    <Icon className="w-6 h-6 text-primary" />
+                <div className="p-4 sm:p-6">
+                  <div className="w-11 sm:w-12 h-11 sm:h-12 rounded-lg sm:rounded-xl bg-primary/10 flex items-center justify-center mb-3 sm:mb-4">
+                    <Icon className="w-5 sm:w-6 h-5 sm:h-6 text-primary" />
                   </div>
-                  <h3 className="text-lg font-bold text-accent mb-2">{service.title}</h3>
-                  <p className="text-sm text-secondary leading-relaxed">{service.description}</p>
+                  <h3 className="text-base sm:text-lg font-bold text-accent mb-2">{service.title}</h3>
+                  <p className="text-xs sm:text-sm text-secondary leading-relaxed">{service.description}</p>
                 </div>
               </Card>
             )
@@ -53,11 +53,11 @@ export function ServicesPreview() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="text-center mt-12"
+          className="text-center mt-10 sm:mt-12"
         >
           <Link
             to="/services"
-            className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all"
+            className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all text-sm sm:text-base"
           >
             View All Services <ChevronRight className="w-4 h-4" />
           </Link>
