@@ -2,6 +2,7 @@ import { SEO } from '../components/seo/SEO'
 import { Section } from '../components/ui/Section'
 import { Container } from '../components/ui/Container'
 import { Heading } from '../components/ui/Heading'
+import { Card } from '../components/ui/Card'
 import { CTASection } from '../components/home/CTASection'
 import { motion } from 'framer-motion'
 import { Leaf, Recycle, Sun, Trees, Heart, Globe } from 'lucide-react'
@@ -41,20 +42,15 @@ export default function Sustainability() {
           <Heading title="Our Sustainability Initiatives" subtitle="Integrating environmental responsibility into every aspect of our operations." />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {INITIATIVES.map((item, i) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="bg-white rounded-2xl p-6 border border-border shadow-sm hover:shadow-lg transition-all"
-              >
-                <div className="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center mb-4">
-                  <item.icon className="w-6 h-6 text-green-600" />
+              <Card key={item.title} variant="premium" delay={i * 0.1}>
+                <div className="p-6">
+                  <div className="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center mb-4">
+                    <item.icon className="w-6 h-6 text-green-600" />
+                  </div>
+                  <h3 className="text-lg font-bold text-accent mb-2">{item.title}</h3>
+                  <p className="text-sm text-secondary leading-relaxed">{item.description}</p>
                 </div>
-                <h3 className="text-lg font-bold text-accent mb-2">{item.title}</h3>
-                <p className="text-sm text-secondary leading-relaxed">{item.description}</p>
-              </motion.div>
+              </Card>
             ))}
           </div>
         </Container>
@@ -70,17 +66,12 @@ export default function Sustainability() {
               { value: '500+', label: 'Trees Planted' },
               { value: '100%', label: 'ISO 14001 Compliant' },
             ].map((stat, i) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="bg-white rounded-2xl p-4 sm:p-8 text-center border border-border shadow-sm"
-              >
-                <div className="text-2xl sm:text-3xl md:text-4xl font-black text-green-600">{stat.value}</div>
-                <div className="mt-1 sm:mt-2 text-xs sm:text-sm text-secondary font-medium">{stat.label}</div>
-              </motion.div>
+              <Card key={stat.label} variant="premium" delay={i * 0.1}>
+                <div className="p-4 sm:p-8 text-center">
+                  <div className="text-2xl sm:text-3xl md:text-4xl font-black text-green-600">{stat.value}</div>
+                  <div className="mt-1 sm:mt-2 text-xs sm:text-sm text-secondary font-medium">{stat.label}</div>
+                </div>
+              </Card>
             ))}
           </div>
         </Container>

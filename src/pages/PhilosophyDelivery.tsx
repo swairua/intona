@@ -1,5 +1,6 @@
 import { SEO } from '../components/seo/SEO'
 import { Container } from '../components/ui/Container'
+import { Card } from '../components/ui/Card'
 import { motion } from 'framer-motion'
 
 const itemVariants = {
@@ -111,15 +112,16 @@ export default function PhilosophyDelivery() {
                   description: 'Final inspections, documentation, and handover with full accountability and support.',
                 },
               ].map((phase, idx) => (
-                <motion.div
+                <Card
                   key={idx}
-                  variants={itemVariants}
-                  className="bg-gradient-to-br from-primary/5 to-primary/10 p-8 rounded-2xl border border-primary/20 hover:border-primary/40 transition-all duration-300"
+                  variant="default"
+                  delay={idx * 0.1}
+                  className="p-8"
                 >
                   <div className="text-5xl font-bold text-primary mb-4">{phase.phase}</div>
                   <h4 className="text-xl font-bold text-accent mb-3">{phase.title}</h4>
                   <p className="text-secondary">{phase.description}</p>
-                </motion.div>
+                </Card>
               ))}
             </div>
           </div>

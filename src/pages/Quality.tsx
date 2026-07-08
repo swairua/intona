@@ -2,6 +2,7 @@ import { SEO } from '../components/seo/SEO'
 import { Section } from '../components/ui/Section'
 import { Container } from '../components/ui/Container'
 import { Heading } from '../components/ui/Heading'
+import { Card } from '../components/ui/Card'
 import { CTASection } from '../components/home/CTASection'
 import { motion } from 'framer-motion'
 import { CheckCircle, Search, FileCheck, RefreshCw, Award, BarChart3 } from 'lucide-react'
@@ -41,21 +42,15 @@ export default function Quality() {
           <Heading title="Our Quality Standards" subtitle="ISO-certified processes that guarantee exceptional project outcomes." />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {QUALITY_ITEMS.map((item, i) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                whileHover={{ y: -8, scale: 1.02 }}
-                className="bg-white rounded-2xl p-6 border border-t-4 border-t-[var(--color-gold)] border-b border-l border-r border-border shadow-md hover:shadow-2xl transition-all duration-300"
-              >
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                  <item.icon className="w-6 h-6 text-primary" />
+              <Card key={item.title} variant="premium" delay={i * 0.1}>
+                <div className="p-6">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                    <item.icon className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-bold text-accent mb-2">{item.title}</h3>
+                  <p className="text-sm text-secondary leading-relaxed">{item.description}</p>
                 </div>
-                <h3 className="text-lg font-bold text-accent mb-2">{item.title}</h3>
-                <p className="text-sm text-secondary leading-relaxed">{item.description}</p>
-              </motion.div>
+              </Card>
             ))}
           </div>
         </Container>

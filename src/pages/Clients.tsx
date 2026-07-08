@@ -2,6 +2,7 @@ import { SEO } from '../components/seo/SEO'
 import { Section } from '../components/ui/Section'
 import { Container } from '../components/ui/Container'
 import { Heading } from '../components/ui/Heading'
+import { Card } from '../components/ui/Card'
 import { ClientCarousel } from '../components/clients/ClientCarousel'
 import { CTASection } from '../components/home/CTASection'
 import { motion } from 'framer-motion'
@@ -40,13 +41,11 @@ export default function Clients() {
           <Heading title="Who We Work With" subtitle="Proud to serve a diverse range of clients across sectors." />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {CLIENT_GROUPS.map((group, i) => (
-              <motion.div
+              <Card
                 key={group.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="bg-white rounded-2xl p-6 border border-border shadow-sm"
+                variant="default"
+                delay={i * 0.1}
+                className="p-6"
               >
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
@@ -61,7 +60,7 @@ export default function Clients() {
                     </span>
                   ))}
                 </div>
-              </motion.div>
+              </Card>
             ))}
           </div>
         </Container>

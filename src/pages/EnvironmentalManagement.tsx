@@ -1,5 +1,6 @@
 import { SEO } from '../components/seo/SEO'
 import { Container } from '../components/ui/Container'
+import { Card } from '../components/ui/Card'
 import { motion } from 'framer-motion'
 
 const itemVariants = {
@@ -120,10 +121,11 @@ export default function EnvironmentalManagement() {
                 items: ['Tree planting programs', 'Ecosystem restoration', 'Environmental education', 'Stakeholder engagement'],
               },
             ].map((initiative, idx) => (
-              <motion.div
+              <Card
                 key={idx}
-                variants={itemVariants}
-                className="bg-gradient-to-br from-primary/5 to-primary/10 p-6 rounded-2xl border border-primary/20"
+                variant="default"
+                delay={idx * 0.1}
+                className="p-6"
               >
                 <h3 className="text-xl font-bold text-accent mb-4">{initiative.title}</h3>
                 <ul className="space-y-2">
@@ -134,23 +136,23 @@ export default function EnvironmentalManagement() {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </Card>
             ))}
           </div>
 
-          <motion.div
-            variants={itemVariants}
-            className="p-8 bg-gradient-to-r from-primary/5 to-primary/10 rounded-2xl border border-primary/20"
+          <Card
+            variant="premium"
+            className="p-8"
           >
             <h3 className="text-2xl font-bold text-accent mb-4">Our Vision for Sustainability</h3>
             <p className="text-secondary leading-relaxed mb-4">
-              We envision construction that enhances rather than diminishes our environment. Through proactive environmental 
+              We envision construction that enhances rather than diminishes our environment. Through proactive environmental
               management, innovation, and stakeholder collaboration, we're building a sustainable future for Kenya.
             </p>
             <p className="text-secondary leading-relaxed">
               Every project is an opportunity to demonstrate environmental leadership and contribute to climate action.
             </p>
-          </motion.div>
+          </Card>
         </motion.div>
       </Container>
     </>
