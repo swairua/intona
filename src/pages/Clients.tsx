@@ -27,7 +27,7 @@ export default function Clients() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-4xl md:text-6xl font-black text-accent mb-4">Our Clients</h1>
+              <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-accent mb-6" style={{ fontFamily: 'var(--font-family-display)' }}>Our Clients</h1>
               <p className="text-xl text-secondary max-w-2xl">
                 Trusted by government agencies, NGOs and private enterprises across the region.
               </p>

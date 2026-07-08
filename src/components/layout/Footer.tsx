@@ -50,7 +50,7 @@ export function Footer() {
       >
         <Container className="py-12 sm:py-16">
           <motion.div variants={itemVariants} className="max-w-3xl mx-auto text-center mb-8 sm:mb-12">
-            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+            <h3 className="text-3xl sm:text-4xl font-bold text-white mb-6" style={{ fontFamily: 'var(--font-family-display)' }}>
               Built on <span className="text-primary">Excellence</span> &amp; <span className="text-primary">Trust</span>
             </h3>
             <p className="text-gray-300 text-sm sm:text-base leading-relaxed">

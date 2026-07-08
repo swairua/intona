@@ -37,7 +37,7 @@ export default function Services() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-accent mb-4">Our Services</h1>
+              <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-accent mb-6" style={{ fontFamily: 'var(--font-family-display)' }}>Our Services</h1>
               <p className="text-base sm:text-lg md:text-xl text-secondary max-w-2xl leading-relaxed">
                 End-to-end construction and engineering solutions tailored to your project needs.
               </p>
@@ -70,7 +70,7 @@ export default function Services() {
             ))}
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {filtered.map((service, i) => (
               <ServiceCard key={service.id} service={service} index={i} />
             ))}

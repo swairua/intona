@@ -35,7 +35,7 @@ export default function Safety() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-3xl sm:text-4xl md:text-6xl font-black text-accent mb-4">Health & Safety</h1>
+              <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-accent mb-6" style={{ fontFamily: 'var(--font-family-display)' }}>Health & Safety</h1>
               <p className="text-base sm:text-lg md:text-xl text-secondary max-w-2xl">
                 Safety is not a priority — it's a value embedded in everything we do.
               </p>

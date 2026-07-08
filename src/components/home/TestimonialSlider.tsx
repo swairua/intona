@@ -44,14 +44,14 @@ export function TestimonialSlider() {
   const t = testimonials[current]
 
   return (
-    <section className="py-16 md:py-24 bg-surface relative overflow-hidden">
+    <section className="py-20 md:py-32 bg-surface relative overflow-hidden">
       <Container>
         <Heading
           title="What Our Clients Say"
           subtitle="Hear from the clients and partners who have trusted us with their most important projects."
         />
 
-        <div className="relative max-w-3xl mx-auto">
+        <div className="relative max-w-3xl mx-auto mt-12">
           <AnimatePresence mode="wait" custom={direction}>
             <motion.div
               key={current}
@@ -60,10 +60,10 @@ export function TestimonialSlider() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: direction > 0 ? -100 : 100 }}
               transition={{ duration: 0.5, ease: 'easeInOut' }}
-              className="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-border"
+              className="bg-white rounded-3xl p-10 md:p-14 shadow-lg border border-border/50"
             >
-              <Quote className="w-12 h-12 text-primary/20 mb-6" />
-              <p className="text-lg md:text-xl text-accent leading-relaxed mb-8 italic">
+              <Quote className="w-12 h-12 text-primary/15 mb-8" />
+              <p className="text-lg md:text-xl text-accent leading-relaxed mb-10 italic font-light">
                 &ldquo;{t.content}&rdquo;
               </p>
 

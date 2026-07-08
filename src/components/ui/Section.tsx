@@ -15,7 +15,7 @@ export function Section({ children, className, bgColor = 'bg-white', id, gradien
     <section
       id={id}
       className={cn(
-        'py-12 sm:py-16 md:py-24',
+        'py-16 sm:py-24 md:py-32',
         gradient && 'bg-gradient-to-br from-white to-surface',
         !gradient && bgColor,
         className,
