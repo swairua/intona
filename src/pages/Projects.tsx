@@ -1,0 +1,54 @@
+import { useState, useEffect } from 'react'
+import { SEO } from '../components/seo/SEO'
+import { Section } from '../components/ui/Section'
+import { Container } from '../components/ui/Container'
+import { ProjectFilters } from '../components/projects/ProjectFilters'
+import { ProjectCard } from '../components/projects/ProjectCard'
+import { CTASection } from '../components/home/CTASection'
+import { getProjects } from '../api/projects'
+import type { Project } from '../types'
+import { motion } from 'framer-motion'
+
+export default function Projects() {
+  const [projects, setProjects] = useState<Project[]>([])
+  const [active, setActive] = useState('All')
+
+  useEffect(() => { getProjects().then(setProjects).catch(() => {}) }, [])
+
+  const filtered = active === 'All' ? projects : projects.filter((p) => p.category === active)
+
+  return (
+    <>
+      <SEO title="Projects" description="Explore our portfolio of completed and ongoing construction projects." />
+      <div className="pt-24 md:pt-28">
+        <Section bgColor="bg-surface">
+          <Container>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <h1 className="text-4xl md:text-6xl font-black text-accent mb-4">Our Projects</h1>
+              <p className="text-xl text-secondary max-w-2xl">
+                A portfolio of excellence — showcasing our finest work across sectors.
+              </p>
+            </motion.div>
+          </Container>
+        </Section>
+      </div>
+
+      <Section>
+        <Container>
+          <ProjectFilters active={active} onSelect={setActive} />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filtered.map((project, i) => (
+              <ProjectCard key={project.id} project={project} index={i} />
+            ))}
+          </div>
+        </Container>
+      </Section>
+
+      <CTASection />
+    </>
+  )
+}

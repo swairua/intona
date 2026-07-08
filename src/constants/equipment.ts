@@ -1,0 +1,68 @@
+import type { Equipment } from '../types'
+
+export const EQUIPMENT_LIST: Equipment[] = [
+  {
+    id: 'bulldozer-d9',
+    name: 'Caterpillar D9 Bulldozer',
+    description: 'Heavy-duty bulldozer for earthmoving, grading and site preparation on large construction projects.',
+    image: '/images/equipment/placeholder.svg',
+    specifications: { 'Engine Power': '410 HP', 'Operating Weight': '49,000 kg', 'Blade Capacity': '18 m³', 'Fuel Tank': '625 L' },
+    availability: 'available',
+  },
+  {
+    id: 'excavator-330',
+    name: 'Caterpillar 330 Excavator',
+    description: 'Versatile hydraulic excavator ideal for trenching, demolition and material handling.',
+    image: '/images/equipment/placeholder.svg',
+    specifications: { 'Engine Power': '275 HP', 'Operating Weight': '33,000 kg', 'Bucket Capacity': '1.8 m³', 'Max Reach': '11.5 m' },
+    availability: 'available',
+  },
+  {
+    id: 'motor-grader',
+    name: 'Caterpillar 140 Motor Grader',
+    description: 'Precision grading equipment for road construction and site leveling.',
+    image: '/images/equipment/placeholder.svg',
+    specifications: { 'Engine Power': '215 HP', 'Operating Weight': '16,500 kg', 'Blade Width': '3.7 m', 'Turning Radius': '7.4 m' },
+    availability: 'available',
+  },
+  {
+    id: 'roller-cs78',
+    name: 'Caterpillar CS78 Vibratory Roller',
+    description: 'Smooth drum vibratory roller for soil compaction and asphalt paving.',
+    image: '/images/equipment/placeholder.svg',
+    specifications: { 'Engine Power': '185 HP', 'Operating Weight': '18,500 kg', 'Drum Width': '2.13 m', 'Centrifugal Force': '352 kN' },
+    availability: 'rented',
+  },
+  {
+    id: 'crane-ltm',
+    name: 'Liebherr LTM 1050 Crane',
+    description: 'Mobile crane for heavy lifting on construction sites and industrial projects.',
+    image: '/images/equipment/placeholder.svg',
+    specifications: { 'Lifting Capacity': '50 tons', 'Boom Length': '40 m', 'Max Hoist Height': '55 m', 'Engine Power': '340 HP' },
+    availability: 'available',
+  },
+  {
+    id: 'concrete-mixer',
+    name: 'Volumetric Concrete Mixer Truck',
+    description: 'Mobile concrete mixing trucks for on-demand concrete delivery to construction sites.',
+    image: '/images/equipment/placeholder.svg',
+    specifications: { 'Capacity': '8 m³', 'Mixing Rate': '0.5 m³/min', 'Engine Power': '280 HP', 'Water Tank': '400 L' },
+    availability: 'available',
+  },
+  {
+    id: 'dump-truck',
+    name: 'Volvo A40D Dump Truck',
+    description: 'Articulated dump trucks for efficient hauling of materials on rough terrain.',
+    image: '/images/equipment/placeholder.svg',
+    specifications: { 'Payload': '40 tons', 'Engine Power': '425 HP', 'Max Speed': '55 km/h', 'Body Volume': '24 m³' },
+    availability: 'maintenance',
+  },
+  {
+    id: 'crane-tower',
+    name: 'Potain Tower Crane',
+    description: 'Tower crane for high-rise building construction with exceptional lifting height and reach.',
+    image: '/images/equipment/placeholder.svg',
+    specifications: { 'Max Load': '12 tons', 'Max Height': '80 m', 'Jib Length': '60 m', 'Hoist Speed': '0-100 m/min' },
+    availability: 'available',
+  },
+]

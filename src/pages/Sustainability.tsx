@@ -1,0 +1,92 @@
+import { SEO } from '../components/seo/SEO'
+import { Section } from '../components/ui/Section'
+import { Container } from '../components/ui/Container'
+import { Heading } from '../components/ui/Heading'
+import { CTASection } from '../components/home/CTASection'
+import { motion } from 'framer-motion'
+import { Leaf, Recycle, Sun, Trees, Heart, Globe } from 'lucide-react'
+
+const INITIATIVES = [
+  { icon: Leaf, title: 'Environmental Policy', description: 'We minimize environmental impact through responsible sourcing, waste reduction and pollution control measures across all operations.' },
+  { icon: Sun, title: 'Green Building', description: 'Design and construction of energy-efficient buildings with sustainable materials, natural lighting and green certifications.' },
+  { icon: Recycle, title: 'Waste Management', description: 'Comprehensive waste segregation, recycling programs and responsible disposal to minimize landfill contribution.' },
+  { icon: Trees, title: 'Energy Efficiency', description: 'Implementation of energy-efficient systems, solar power integration and smart building technologies in our projects.' },
+  { icon: Heart, title: 'CSR Projects', description: 'Community development initiatives including school construction, healthcare facilities and skills training programs.' },
+  { icon: Globe, title: 'Carbon Footprint', description: 'Active monitoring and reduction of carbon emissions through efficient logistics, equipment and construction methods.' },
+]
+
+export default function Sustainability() {
+  return (
+    <>
+      <SEO title="Sustainability" description="Our commitment to sustainable construction and environmental responsibility." />
+      <div className="pt-24 md:pt-28">
+        <Section bgColor="bg-surface">
+          <Container>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <h1 className="text-4xl md:text-6xl font-black text-accent mb-4">Sustainability</h1>
+              <p className="text-xl text-secondary max-w-2xl">
+                Building a better future through responsible construction and environmental stewardship.
+              </p>
+            </motion.div>
+          </Container>
+        </Section>
+      </div>
+
+      <Section>
+        <Container>
+          <Heading title="Our Sustainability Initiatives" subtitle="Integrating environmental responsibility into every aspect of our operations." />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {INITIATIVES.map((item, i) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="bg-white rounded-2xl p-6 border border-border shadow-sm hover:shadow-lg transition-all"
+              >
+                <div className="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center mb-4">
+                  <item.icon className="w-6 h-6 text-green-600" />
+                </div>
+                <h3 className="text-lg font-bold text-accent mb-2">{item.title}</h3>
+                <p className="text-sm text-secondary leading-relaxed">{item.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </Container>
+      </Section>
+
+      <Section bgColor="bg-surface">
+        <Container>
+          <Heading title="Our Environmental Impact" subtitle="Measurable commitments to a sustainable future." />
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {[
+              { value: '35%', label: 'Carbon Reduction' },
+              { value: '60%', label: 'Waste Recycled' },
+              { value: '500+', label: 'Trees Planted' },
+              { value: '100%', label: 'ISO 14001 Compliant' },
+            ].map((stat, i) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="bg-white rounded-2xl p-8 text-center border border-border shadow-sm"
+              >
+                <div className="text-3xl md:text-4xl font-black text-green-600">{stat.value}</div>
+                <div className="mt-2 text-sm text-secondary font-medium">{stat.label}</div>
+              </motion.div>
+            ))}
+          </div>
+        </Container>
+      </Section>
+
+      <CTASection />
+    </>
+  )
+}
