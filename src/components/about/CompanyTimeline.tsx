@@ -13,16 +13,16 @@ export function CompanyTimeline() {
           title="Company Timeline"
           subtitle="Key milestones in our journey of growth and excellence."
         />
-        <div className="relative max-w-3xl mx-auto px-4 sm:px-0">
-          <div className="absolute left-4 sm:left-8 top-0 bottom-0 w-0.5 bg-primary/20" />
+        <div className="relative max-w-3xl mx-auto">
+          <div className="absolute left-3.5 sm:left-7 top-0 bottom-0 w-0.5 bg-primary/20" />
           <div className="space-y-8 sm:space-y-12">
             {HISTORY.map((event, i) => (
               <div
                 key={event.year}
-                className="relative pl-14 sm:pl-20"
+                className="relative pl-16 sm:pl-24"
               >
-                <div className="absolute left-2 sm:left-4 top-1 w-8 sm:w-9 h-8 sm:h-9 rounded-full bg-white border-2 border-primary flex items-center justify-center">
-                  <div className="w-2.5 sm:w-3 h-2.5 sm:h-3 rounded-full bg-primary" />
+                <div className="absolute left-0 sm:left-1 top-1 w-8 sm:w-10 h-8 sm:h-10 rounded-full bg-white border-2 border-primary flex items-center justify-center">
+                  <div className="w-3 sm:w-3.5 h-3 sm:h-3.5 rounded-full bg-primary" />
                 </div>
                 <Card variant="premium" delay={i * 0.1}>
                   <div className="p-4 sm:p-6">

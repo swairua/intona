@@ -51,7 +51,7 @@ export function HeroSection() {
 
             <motion.h1
               variants={itemVariants}
-              className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-tight tracking-tight"
+              className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight tracking-tight"
               style={{ fontFamily: 'var(--font-family-display)' }}
             >
               Building
@@ -72,7 +72,7 @@ export function HeroSection() {
 
             <motion.div
               variants={itemVariants}
-              className="mt-10 sm:mt-14 flex flex-col sm:flex-row gap-4 sm:gap-5 items-start sm:items-center"
+              className="mt-12 sm:mt-16 flex flex-col sm:flex-row gap-6 sm:gap-8 items-start sm:items-center"
             >
               <Link to="/request-quotation" className="w-full sm:w-auto">
                 <Button size="lg" className="w-full sm:w-auto shadow-2xl shadow-primary/40 group">

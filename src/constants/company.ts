@@ -1,10 +1,10 @@
 import type { Certification, TeamMember, Testimonial, TimelineEvent, Vacancy } from '../types'
 
 export const COMPANY = {
-  name: 'Intona Constructions Ltd',
+  name: 'Intona Construction Limited',
   tagline: 'Building Excellence. Delivering Quality.',
   description:
-    'Intona Constructions Ltd delivers innovative, reliable and sustainable construction solutions across residential, commercial and infrastructure projects.',
+    'Intona Construction Limited delivers innovative, reliable and sustainable construction solutions across residential, commercial and infrastructure projects.',
   phone: '+256 700 000 000',
   email: 'info@intonaconstructions.com',
   address: 'Plot 00, Kampala Road, Kampala, Uganda',
@@ -30,7 +30,7 @@ export const STATS = {
 }
 
 export const HISTORY: TimelineEvent[] = [
-  { year: '2010', title: 'Founded', description: 'Intona Constructions Ltd was established with a vision to transform the construction landscape in Uganda.' },
+  { year: '2010', title: 'Founded', description: 'Intona Construction Limited was established with a vision to transform the construction landscape in Uganda.' },
   { year: '2012', title: 'First Major Project', description: 'Completed our first commercial building project, setting the standard for quality and timely delivery.' },
   { year: '2014', title: 'Civil Engineering Expansion', description: 'Expanded into civil engineering and infrastructure projects including roads and bridges.' },
   { year: '2016', title: 'ISO Certification', description: 'Achieved ISO 9001:2015 certification for quality management systems.' },

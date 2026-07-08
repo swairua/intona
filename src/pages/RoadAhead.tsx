@@ -147,7 +147,7 @@ export default function RoadAhead() {
           >
             <h3 className="text-2xl font-bold text-accent mb-4">Our Long-term Vision</h3>
             <p className="text-secondary leading-relaxed mb-4">
-              By 2030, Intona Constructions will be recognized as:
+              By 2030, Intona Construction Limited will be recognized as:
             </p>
             <ul className="space-y-3">
               {[

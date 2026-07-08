@@ -48,11 +48,11 @@ export function Header() {
     >
       <Container>
         <div className="flex items-center justify-between h-20 md:h-24 px-4 sm:px-6">
-          <Link to="/" className="flex items-center z-50 h-14">
+          <Link to="/" className="flex items-center z-50 h-20 xl:h-48 mr-4 sm:mr-0">
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2F6fa2b67a369a4cabbee7a4d7f8558488%2F81d56599669b45b096087813285659d3?format=webp&width=200"
-              alt="Intona Constructions"
-              className="h-12 w-auto object-contain"
+              alt="Intona Construction Limited"
+              className="h-16 md:h-20 xl:h-48 w-auto object-contain"
             />
           </Link>
 
