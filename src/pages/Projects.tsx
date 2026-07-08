@@ -28,8 +28,8 @@ export default function Projects() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-4xl md:text-6xl font-black text-accent mb-4">Our Projects</h1>
-              <p className="text-xl text-secondary max-w-2xl">
+              <h1 className="text-3xl sm:text-4xl md:text-6xl font-black text-accent mb-4">Our Projects</h1>
+              <p className="text-base sm:text-lg md:text-xl text-secondary max-w-2xl">
                 A portfolio of excellence — showcasing our finest work across sectors.
               </p>
             </motion.div>
@@ -40,7 +40,7 @@ export default function Projects() {
       <Section>
         <Container>
           <ProjectFilters active={active} onSelect={setActive} />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {filtered.map((project, i) => (
               <ProjectCard key={project.id} project={project} index={i} />
             ))}

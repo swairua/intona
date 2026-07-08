@@ -25,14 +25,14 @@ export function WhyChooseUs() {
   return (
     <section className="py-16 md:py-24 bg-white">
       <Container>
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto px-4 sm:px-0">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-accent">Why Choose Intona?</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-accent">Why Choose Intona?</h2>
             <div className="mt-4 h-1 w-20 bg-primary rounded-full mx-auto" />
           </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -73,8 +73,8 @@ export default function About() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-4xl md:text-6xl font-black text-accent mb-4">About Us</h1>
-              <p className="text-xl text-secondary max-w-2xl">
+              <h1 className="text-3xl sm:text-4xl md:text-6xl font-black text-accent mb-4">About Us</h1>
+              <p className="text-base sm:text-lg md:text-xl text-secondary max-w-2xl">
                 Building excellence since 2010 — a legacy of quality, innovation and trust.
               </p>
             </motion.div>

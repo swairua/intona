@@ -27,7 +27,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-tight sm:leading-[1.05] tracking-tight"
+            className="text-2xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-tight sm:leading-[1.05] tracking-tight"
           >
             Building
             <br />
@@ -41,7 +41,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="mt-6 sm:mt-8 text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl leading-relaxed"
+            className="mt-4 sm:mt-8 text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 max-w-2xl leading-relaxed"
           >
             Intona Constructions Ltd delivers innovative, reliable and sustainable construction
             solutions across residential, commercial and infrastructure projects.
@@ -51,7 +51,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="mt-8 sm:mt-10 flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4"
+            className="mt-6 sm:mt-10 flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4"
           >
             <Link to="/request-quotation" className="w-full sm:w-auto">
               <Button size="lg" className="w-full shadow-2xl shadow-primary/30 group">

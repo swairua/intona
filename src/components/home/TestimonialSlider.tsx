@@ -87,7 +87,7 @@ export function TestimonialSlider() {
           <div className="flex items-center justify-center gap-4 mt-8">
             <button
               onClick={goPrev}
-              className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-secondary hover:text-primary hover:border-primary transition-all"
+              className="w-11 h-11 rounded-full border border-border flex items-center justify-center text-secondary hover:text-primary hover:border-primary transition-all"
               aria-label="Previous testimonial"
             >
               <ChevronLeft className="w-5 h-5" />
@@ -98,7 +98,7 @@ export function TestimonialSlider() {
                 <button
                   key={i}
                   onClick={() => goTo(i)}
-                  className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
                     i === current ? 'bg-primary w-8' : 'bg-gray-300 hover:bg-gray-400'
                   }`}
                   aria-label={`Go to testimonial ${i + 1}`}
@@ -108,7 +108,7 @@ export function TestimonialSlider() {
 
             <button
               onClick={goNext}
-              className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-secondary hover:text-primary hover:border-primary transition-all"
+              className="w-11 h-11 rounded-full border border-border flex items-center justify-center text-secondary hover:text-primary hover:border-primary transition-all"
               aria-label="Next testimonial"
             >
               <ChevronRight className="w-5 h-5" />
