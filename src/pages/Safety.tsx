@@ -2,6 +2,7 @@ import { SEO } from '../components/seo/SEO'
 import { Section } from '../components/ui/Section'
 import { Container } from '../components/ui/Container'
 import { Heading } from '../components/ui/Heading'
+import { Card } from '../components/ui/Card'
 import { CTASection } from '../components/home/CTASection'
 import { motion } from 'framer-motion'
 import { Shield, HardHat, AlertTriangle, ClipboardCheck, Users, TrendingUp } from 'lucide-react'
@@ -48,20 +49,15 @@ export default function Safety() {
           <Heading title="Our Safety Policies" subtitle="Comprehensive safety framework protecting our people, partners and communities." />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {POLICIES.map((policy, i) => (
-              <motion.div
-                key={policy.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="bg-white rounded-2xl p-6 border border-border shadow-sm hover:shadow-lg transition-all"
-              >
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                  <policy.icon className="w-6 h-6 text-primary" />
+              <Card key={policy.title} variant="premium" delay={i * 0.1}>
+                <div className="p-6">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                    <policy.icon className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-bold text-accent mb-2">{policy.title}</h3>
+                  <p className="text-sm text-secondary leading-relaxed">{policy.description}</p>
                 </div>
-                <h3 className="text-lg font-bold text-accent mb-2">{policy.title}</h3>
-                <p className="text-sm text-secondary leading-relaxed">{policy.description}</p>
-              </motion.div>
+              </Card>
             ))}
           </div>
         </Container>
@@ -72,17 +68,12 @@ export default function Safety() {
           <Heading title="Safety Performance" subtitle="Our commitment to zero harm — measured, tracked and improved." />
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6">
             {STATS.map((stat, i) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="bg-white rounded-2xl p-4 sm:p-8 text-center border border-border shadow-sm"
-              >
-                <div className="text-2xl sm:text-3xl md:text-4xl font-black text-primary">{stat.value}</div>
-                <div className="mt-1 sm:mt-2 text-xs sm:text-sm text-secondary font-medium">{stat.label}</div>
-              </motion.div>
+              <Card key={stat.label} variant="premium" delay={i * 0.1}>
+                <div className="p-4 sm:p-8 text-center">
+                  <div className="text-2xl sm:text-3xl md:text-4xl font-black text-primary">{stat.value}</div>
+                  <div className="mt-1 sm:mt-2 text-xs sm:text-sm text-secondary font-medium">{stat.label}</div>
+                </div>
+              </Card>
             ))}
           </div>
         </Container>

@@ -1,5 +1,6 @@
 import { SEO } from '../components/seo/SEO'
 import { Container } from '../components/ui/Container'
+import { Card } from '../components/ui/Card'
 import { motion } from 'framer-motion'
 
 const itemVariants = {
@@ -75,22 +76,20 @@ export default function Compliance() {
                 points: ['Quality assurance', 'Testing & inspection', 'Documentation', 'Continuous improvement'],
               },
             ].map((pillar, idx) => (
-              <motion.div
-                key={idx}
-                variants={itemVariants}
-                className="bg-gradient-to-br from-primary/5 to-primary/10 p-6 rounded-2xl border border-primary/20 hover:border-primary/40 transition-all"
-              >
-                <div className="text-4xl mb-4">{pillar.icon}</div>
-                <h3 className="text-xl font-bold text-accent mb-4">{pillar.title}</h3>
-                <ul className="space-y-2">
-                  {pillar.points.map((point, i) => (
-                    <li key={i} className="text-sm text-secondary flex items-start gap-2">
-                      <span className="text-primary mt-1">•</span>
-                      {point}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
+              <Card key={idx} variant="premium" delay={idx * 0.1}>
+                <div className="p-6">
+                  <div className="text-4xl mb-4">{pillar.icon}</div>
+                  <h3 className="text-xl font-bold text-accent mb-4">{pillar.title}</h3>
+                  <ul className="space-y-2">
+                    {pillar.points.map((point, i) => (
+                      <li key={i} className="text-sm text-secondary flex items-start gap-2">
+                        <span className="text-primary mt-1">•</span>
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </Card>
             ))}
           </div>
 
@@ -129,16 +128,15 @@ export default function Compliance() {
             ))}
           </div>
 
-          <motion.div
-            variants={itemVariants}
-            className="p-8 bg-gradient-to-r from-primary/5 to-primary/10 rounded-2xl border border-primary/20"
-          >
-            <h3 className="text-2xl font-bold text-accent mb-4">Commitment to Continuous Improvement</h3>
-            <p className="text-secondary leading-relaxed">
-              We view compliance not as a checkbox but as a foundation for excellence. Regular audits, staff training, 
-              and stakeholder feedback help us continuously refine our practices and maintain industry-leading standards.
-            </p>
-          </motion.div>
+          <Card variant="premium">
+            <div className="p-8 bg-gradient-to-r from-primary/5 to-primary/10">
+              <h3 className="text-2xl font-bold text-accent mb-4">Commitment to Continuous Improvement</h3>
+              <p className="text-secondary leading-relaxed">
+                We view compliance not as a checkbox but as a foundation for excellence. Regular audits, staff training,
+                and stakeholder feedback help us continuously refine our practices and maintain industry-leading standards.
+              </p>
+            </div>
+          </Card>
         </motion.div>
       </Container>
     </>

@@ -1,5 +1,6 @@
 import { SEO } from '../components/seo/SEO'
 import { Container } from '../components/ui/Container'
+import { Card } from '../components/ui/Card'
 import { motion } from 'framer-motion'
 
 const itemVariants = {
@@ -83,17 +84,19 @@ export default function Expertise() {
                 className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start"
               >
                 <div className={idx % 2 === 1 ? 'md:order-2' : ''}>
-                  <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-8 rounded-2xl border border-primary/20 h-full">
-                    <h3 className="text-2xl font-bold text-accent mb-6">{service.title}</h3>
-                    <ul className="space-y-3">
-                      {service.highlights.map((highlight, i) => (
-                        <li key={i} className="flex items-start gap-3">
-                          <span className="text-primary font-bold mt-1">✓</span>
-                          <span className="text-secondary">{highlight}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  <Card variant="premium" delay={idx * 0.1}>
+                    <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-8 h-full">
+                      <h3 className="text-2xl font-bold text-accent mb-6">{service.title}</h3>
+                      <ul className="space-y-3">
+                        {service.highlights.map((highlight, i) => (
+                          <li key={i} className="flex items-start gap-3">
+                            <span className="text-primary font-bold mt-1">✓</span>
+                            <span className="text-secondary">{highlight}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </Card>
                 </div>
                 <div className={idx % 2 === 1 ? 'md:order-1' : ''}>
                   <img
@@ -106,18 +109,17 @@ export default function Expertise() {
             ))}
           </div>
 
-          <motion.div
-            variants={itemVariants}
-            className="mt-16 p-8 bg-gradient-to-r from-primary/5 to-primary/10 rounded-2xl border border-primary/20"
-          >
-            <h3 className="text-2xl font-bold text-accent mb-4">Why Choose Our Expertise</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <p className="text-secondary">✓ Proven track record across 100+ projects</p>
-              <p className="text-secondary">✓ Certified professionals and specialists</p>
-              <p className="text-secondary">✓ Latest technology and equipment</p>
-              <p className="text-secondary">✓ Sustainable and ethical practices</p>
+          <Card variant="premium">
+            <div className="mt-16 p-8 bg-gradient-to-r from-primary/5 to-primary/10">
+              <h3 className="text-2xl font-bold text-accent mb-4">Why Choose Our Expertise</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <p className="text-secondary">✓ Proven track record across 100+ projects</p>
+                <p className="text-secondary">✓ Certified professionals and specialists</p>
+                <p className="text-secondary">✓ Latest technology and equipment</p>
+                <p className="text-secondary">✓ Sustainable and ethical practices</p>
+              </div>
             </div>
-          </motion.div>
+          </Card>
         </motion.div>
       </Container>
     </>
