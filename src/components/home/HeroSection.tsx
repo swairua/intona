@@ -26,9 +26,12 @@ export function HeroSection() {
   } as const
 
   return (
-    <section className="relative min-h-screen bg-accent overflow-hidden">
+    <section className="relative min-h-screen bg-gradient-to-br from-accent via-accent to-[#0a0a0a] overflow-hidden">
       {/* Decorative accent line on left */}
       <div className="absolute left-0 top-1/4 w-1 h-32 bg-gradient-to-b from-primary via-primary to-transparent" />
+
+      {/* Subtle background accent gradient */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
 
       <Container className="h-screen flex items-center px-4 py-12 sm:py-16 md:py-0">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 w-full items-center">
@@ -48,7 +51,8 @@ export function HeroSection() {
 
             <motion.h1
               variants={itemVariants}
-              className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight"
+              className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-tight tracking-tight"
+              style={{ fontFamily: 'var(--font-family-display)' }}
             >
               Building
               <br />
@@ -60,7 +64,7 @@ export function HeroSection() {
 
             <motion.p
               variants={itemVariants}
-              className="mt-6 sm:mt-8 text-base sm:text-lg text-gray-200 leading-relaxed max-w-xl"
+              className="mt-8 sm:mt-10 text-base sm:text-lg text-gray-200 leading-relaxed max-w-xl font-light"
             >
               Intona Constructions Ltd delivers innovative, reliable and sustainable construction
               solutions across residential, commercial and infrastructure projects.
@@ -68,7 +72,7 @@ export function HeroSection() {
 
             <motion.div
               variants={itemVariants}
-              className="mt-8 sm:mt-12 flex flex-col sm:flex-row gap-3 sm:gap-4 items-start sm:items-center"
+              className="mt-10 sm:mt-14 flex flex-col sm:flex-row gap-4 sm:gap-5 items-start sm:items-center"
             >
               <Link to="/request-quotation" className="w-full sm:w-auto">
                 <Button size="lg" className="w-full sm:w-auto shadow-2xl shadow-primary/40 group">

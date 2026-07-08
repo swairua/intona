@@ -56,8 +56,9 @@ export function Heading({
       <h2 className={cn(
         sizeMap[size],
         'font-bold tracking-tight lg:tracking-tighter',
+        'font-serif',
         titleColorMap[titleColor],
-      )}>
+      )} style={{ fontFamily: 'var(--font-family-display)' }}>
         {title}
       </h2>
       {subtitle && (

@@ -16,14 +16,14 @@ export function FeaturedProjects() {
   }, [])
 
   return (
-    <section className="py-16 md:py-24 bg-white">
+    <section className="py-20 md:py-32 bg-white">
       <Container>
         <Heading
           title="Featured Projects"
           subtitle="Showcasing our commitment to excellence through landmark projects that define communities."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 mt-12">
           {projects.map((project, i) => (
             <motion.div
               key={project.id}

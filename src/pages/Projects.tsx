@@ -28,7 +28,7 @@ export default function Projects() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-accent mb-4">Our Projects</h1>
+              <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-accent mb-6" style={{ fontFamily: 'var(--font-family-display)' }}>Our Projects</h1>
               <p className="text-base sm:text-lg md:text-xl text-secondary max-w-2xl leading-relaxed">
                 A portfolio of excellence — showcasing our finest work across sectors.
               </p>

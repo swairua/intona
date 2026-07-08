@@ -26,7 +26,7 @@ export default function Contact() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-accent mb-4">Contact Us</h1>
+              <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-accent mb-6" style={{ fontFamily: 'var(--font-family-display)' }}>Contact Us</h1>
               <p className="text-base sm:text-lg md:text-xl text-secondary max-w-2xl leading-relaxed">
                 Ready to start your project? Get in touch with our team.
               </p>

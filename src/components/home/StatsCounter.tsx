@@ -22,7 +22,7 @@ function StatItem({ label, value, suffix, Icon, index }: { label: string; value:
       transition={{ duration: 0.5, delay: index * 0.1 }}
       className="relative group"
     >
-      <div className="bg-white rounded-2xl border border-border p-4 sm:p-6 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+      <div className="bg-white rounded-3xl border border-border/50 p-6 sm:p-8 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
         <div className="w-10 sm:w-12 h-10 sm:h-12 mx-auto mb-3 sm:mb-4 rounded-lg sm:rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all duration-300">
           <Icon className="w-5 sm:w-6 h-5 sm:h-6 text-primary group-hover:text-white transition-colors" />
         </div>
@@ -49,7 +49,7 @@ export function StatsCounter() {
   return (
     <section className="relative -mt-24 z-20 pb-16">
       <Container>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
           {values.map((value, i) => (
             <StatItem key={LABELS[i]} label={LABELS[i]} value={value} suffix={SUFFIXES[i]} Icon={ICON_MAP[i]} index={i} />
           ))}

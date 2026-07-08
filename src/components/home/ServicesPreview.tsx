@@ -44,7 +44,7 @@ export function ServicesPreview() {
   }
 
   return (
-    <section className="py-12 sm:py-16 md:py-24 bg-surface relative overflow-hidden">
+    <section className="py-16 sm:py-24 md:py-32 bg-surface relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10" />
       <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10" />
@@ -60,7 +60,7 @@ export function ServicesPreview() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10"
         >
           {services.map((service, i) => {
             const Icon = getIcon(service.icon)

@@ -12,6 +12,7 @@
   --color-gold: #D4A574;
   --color-copper: #A89060;
   --font-family-base: "Inter", system-ui, sans-serif;
+  --font-family-display: "Playfair Display", serif;
 
   --shadow-premium-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
   --shadow-premium-md: 0 4px 16px rgba(0, 0, 0, 0.12);
