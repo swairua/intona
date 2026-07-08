@@ -23,7 +23,7 @@ export function Footer() {
             <p className="text-gray-400 leading-relaxed mb-6 max-w-md">
               {COMPANY.description}
             </p>
-            <div className="flex gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
                 { icon: MapPin, label: 'Address', value: COMPANY.address },
                 { icon: Phone, label: 'Phone', value: COMPANY.phone, href: `tel:${COMPANY.phone}` },
@@ -35,11 +35,11 @@ export function Footer() {
                   <div>
                     <p className="text-xs text-gray-500 mb-0.5">{label}</p>
                     {href ? (
-                      <a href={href} className="text-sm text-gray-300 hover:text-primary transition-colors">
+                      <a href={href} className="text-sm text-gray-300 hover:text-primary transition-colors break-all">
                         {value}
                       </a>
                     ) : (
-                      <p className="text-sm text-gray-300">{value}</p>
+                      <p className="text-sm text-gray-300 break-words">{value}</p>
                     )}
                   </div>
                 </div>
