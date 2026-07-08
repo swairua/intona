@@ -52,7 +52,7 @@ export function Header() {
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2F6fa2b67a369a4cabbee7a4d7f8558488%2F81d56599669b45b096087813285659d3?format=webp&width=200"
               alt="Intona Constructions"
-              className="h-12 w-auto object-contain"
+              className="h-12 md:h-14 xl:h-36 w-auto object-contain"
             />
           </Link>
 
