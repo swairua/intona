@@ -21,9 +21,9 @@ export default function EnvironmentalManagement() {
       />
       
       {/* Hero Section */}
-      <section className="relative min-h-[400px] md:min-h-[500px] flex items-center overflow-hidden pt-20">
+      <section className="relative min-h-[400px] md:min-h-[500px] flex items-center overflow-hidden pt-20 environmental-hero-bg">
         <div className="absolute inset-0 bg-gradient-to-br from-accent/95 via-accent/90 to-accent/80 z-10" />
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920')] bg-cover bg-center" />
+        <div className="absolute inset-0 bg-cover bg-center" style={{backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2Fc289c2c29f354ddfba7264f2fced3fad%2F080ebbec547348bc85fe0df1aa7550c0?format=webp&width=1920)'}} />
         
         <Container className="relative z-20">
           <motion.div

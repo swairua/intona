@@ -21,9 +21,9 @@ export default function Expertise() {
       />
       
       {/* Hero Section */}
-      <section className="relative min-h-[400px] md:min-h-[500px] flex items-center overflow-hidden pt-20">
+      <section className="relative min-h-[400px] md:min-h-[500px] flex items-center overflow-hidden pt-20 expertise-hero-bg">
         <div className="absolute inset-0 bg-gradient-to-br from-accent/95 via-accent/90 to-accent/80 z-10" />
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920')] bg-cover bg-center" />
+        <div className="absolute inset-0 bg-cover bg-center" style={{backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2Fc289c2c29f354ddfba7264f2fced3fad%2F7ea274c04f374b529778cd0cdf834ff6?format=webp&width=1920)'}} />
         
         <Container className="relative z-20">
           <motion.div
@@ -100,9 +100,16 @@ export default function Expertise() {
                 </div>
                 <div className={idx % 2 === 1 ? 'md:order-1' : ''}>
                   <img
-                    src={`https://images.unsplash.com/photo-${idx % 2 === 0 ? '1541888946425-d81bb19240f4' : '1552664730-d307ca884978'}?w=500&h=400&fit=crop`}
+                    src={[
+                      'https://cdn.builder.io/api/v1/image/assets%2Fc289c2c29f354ddfba7264f2fced3fad%2F047753769db24e5e91f7bfb612eaf949?format=webp&width=600',
+                      'https://cdn.builder.io/api/v1/image/assets%2Fc289c2c29f354ddfba7264f2fced3fad%2Fbd1101b749f44231922e72387b40ec6b?format=webp&width=600',
+                      'https://cdn.builder.io/api/v1/image/assets%2Fc289c2c29f354ddfba7264f2fced3fad%2F4ce34cc1f7674d679ed4b0bdd0162e33?format=webp&width=600',
+                      'https://cdn.builder.io/api/v1/image/assets%2Fc289c2c29f354ddfba7264f2fced3fad%2F59dad5403e67408097449e7180418680?format=webp&width=600',
+                      'https://cdn.builder.io/api/v1/image/assets%2Fc289c2c29f354ddfba7264f2fced3fad%2F1faf6fe8df394827ac262dfdcc8d5a6b?format=webp&width=600',
+                      'https://cdn.builder.io/api/v1/image/assets%2Fc289c2c29f354ddfba7264f2fced3fad%2F4cbd85c3202a4b42b03c6472f85aed7b?format=webp&width=600',
+                    ][idx]}
                     alt={service.title}
-                    className="rounded-2xl shadow-lg w-full"
+                    className="rounded-2xl shadow-lg w-full object-cover aspect-[4/3]"
                   />
                 </div>
               </motion.div>

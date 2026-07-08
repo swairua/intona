@@ -105,7 +105,7 @@ export function HeroSection() {
             transition={{ duration: 0.9, delay: 0.3, ease: 'easeOut' }}
             className="relative h-96 md:h-full md:min-h-screen order-1 md:order-2 -mx-4 md:mx-0"
           >
-            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1541888946425-d81bb19240f4?w=1920')] bg-cover bg-center rounded-lg md:rounded-none overflow-hidden">
+            <div className="absolute inset-0 bg-cover bg-center rounded-lg md:rounded-none overflow-hidden hero-image-container">
               {/* Overlay for better text readability if needed */}
               <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-accent/60" />
             </div>
