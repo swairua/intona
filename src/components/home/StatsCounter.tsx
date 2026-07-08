@@ -47,7 +47,7 @@ export function StatsCounter() {
   const values = [stats.yearsExperience, stats.completedProjects, stats.happyClients, stats.engineers, stats.currentProjects]
 
   return (
-    <section className="relative -mt-24 z-20 pb-16">
+    <section className="relative -mt-24 z-20 pb-16 stats-section">
       <Container>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
           {values.map((value, i) => (

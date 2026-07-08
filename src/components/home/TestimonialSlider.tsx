@@ -51,7 +51,7 @@ export function TestimonialSlider() {
           subtitle="Hear from the clients and partners who have trusted us with their most important projects."
         />
 
-        <div className="relative max-w-3xl mx-auto mt-12">
+        <div className="relative max-w-4xl mx-auto mt-12">
           <AnimatePresence mode="wait" custom={direction}>
             <motion.div
               key={current}
@@ -60,27 +60,43 @@ export function TestimonialSlider() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: direction > 0 ? -100 : 100 }}
               transition={{ duration: 0.5, ease: 'easeInOut' }}
-              className="bg-white rounded-3xl p-10 md:p-14 shadow-lg border border-border/50"
+              className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white rounded-3xl overflow-hidden shadow-lg border border-border/50"
             >
-              <Quote className="w-12 h-12 text-primary/15 mb-8" />
-              <p className="text-lg md:text-xl text-accent leading-relaxed mb-10 italic font-light">
-                &ldquo;{t.content}&rdquo;
-              </p>
+              {/* Testimonial Content */}
+              <div className="p-10 md:p-14 flex flex-col justify-between">
+                <div>
+                  <Quote className="w-12 h-12 text-primary/15 mb-8" />
+                  <p className="text-lg md:text-xl text-accent leading-relaxed mb-10 italic font-light">
+                    &ldquo;{t.content}&rdquo;
+                  </p>
+                </div>
 
-              <div className="flex items-center gap-4">
-                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-xl">
-                  {t.name.split(' ').map(n => n[0]).join('')}
-                </div>
-                <div className="flex-1">
-                  <h4 className="font-bold text-accent">{t.name}</h4>
-                  <p className="text-sm text-secondary">{t.role}, {t.company}</p>
-                </div>
-                <div className="flex gap-0.5">
-                  {Array.from({ length: t.rating }).map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-primary text-primary" />
-                  ))}
+                <div className="flex items-center gap-4">
+                  <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-xl flex-shrink-0">
+                    {t.name.split(' ').map(n => n[0]).join('')}
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h4 className="font-bold text-accent">{t.name}</h4>
+                    <p className="text-sm text-secondary">{t.role}, {t.company}</p>
+                  </div>
+                  <div className="flex gap-0.5 flex-shrink-0">
+                    {Array.from({ length: t.rating }).map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+                    ))}
+                  </div>
                 </div>
               </div>
+
+              {/* Project Image */}
+              {t.image && (
+                <div className="hidden md:block h-full min-h-96 overflow-hidden">
+                  <img
+                    src={t.image}
+                    alt={`${t.name}'s project`}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              )}
             </motion.div>
           </AnimatePresence>
 

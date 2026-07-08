@@ -20,19 +20,34 @@ export default function Quality() {
   return (
     <>
       <SEO title="Quality Assurance" description="Our commitment to ISO-certified quality management and continuous improvement." />
-      <div className="pt-24 md:pt-28">
-        <Section bgColor="bg-surface">
+      <div className="pt-20 sm:pt-24 md:pt-32 quality-hero-bg relative">
+        <Section bgColor="bg-accent text-white">
           <Container>
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-accent mb-6" style={{ fontFamily: 'var(--font-family-display)' }}>Quality Assurance</h1>
-              <p className="text-base sm:text-lg md:text-xl text-secondary max-w-2xl">
-                Excellence is not an act — it's a habit. Our quality systems ensure every project meets the highest standards.
-              </p>
-            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center py-12 md:py-16">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+                <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-6" style={{ fontFamily: 'var(--font-family-display)' }}>Quality Assurance</h1>
+                <p className="text-base sm:text-lg md:text-xl text-white/80 max-w-2xl">
+                  Excellence is not an act — it's a habit. Our quality systems ensure every project meets the highest standards.
+                </p>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.7, delay: 0.2 }}
+                className="hidden md:block relative rounded-2xl overflow-hidden aspect-video"
+              >
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fc289c2c29f354ddfba7264f2fced3fad%2F1ea82a1404fb473f883e5a750e634b87?format=webp&width=1200"
+                  alt="Quality showcase"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-accent/40 to-transparent" />
+              </motion.div>
+            </div>
           </Container>
         </Section>
       </div>

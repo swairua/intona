@@ -44,7 +44,7 @@ export function ServicesPreview() {
   }
 
   return (
-    <section className="py-16 sm:py-24 md:py-32 bg-surface relative overflow-hidden">
+    <section className="py-16 sm:py-24 md:py-32 bg-surface relative overflow-hidden services-section-bg">
       {/* Decorative elements */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10" />
       <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10" />
