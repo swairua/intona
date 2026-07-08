@@ -3,6 +3,15 @@ import { HelmetProvider } from 'react-helmet-async'
 import { Layout } from './components/layout/Layout'
 import Home from './pages/Home'
 import About from './pages/About'
+import VisionMission from './pages/VisionMission'
+import PhilosophyDelivery from './pages/PhilosophyDelivery'
+import StrategicObjectives from './pages/StrategicObjectives'
+import Expertise from './pages/Expertise'
+import Compliance from './pages/Compliance'
+import Wellness from './pages/Wellness'
+import EnvironmentalManagement from './pages/EnvironmentalManagement'
+import SocialImpact from './pages/SocialImpact'
+import RoadAhead from './pages/RoadAhead'
 import Services from './pages/Services'
 import Projects from './pages/Projects'
 import Equipment from './pages/Equipment'
@@ -25,6 +34,15 @@ export default function App() {
           <Route element={<Layout />}>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/vision-mission" element={<VisionMission />} />
+            <Route path="/philosophy-delivery" element={<PhilosophyDelivery />} />
+            <Route path="/objectives" element={<StrategicObjectives />} />
+            <Route path="/expertise" element={<Expertise />} />
+            <Route path="/compliance" element={<Compliance />} />
+            <Route path="/wellness" element={<Wellness />} />
+            <Route path="/environmental" element={<EnvironmentalManagement />} />
+            <Route path="/social-impact" element={<SocialImpact />} />
+            <Route path="/road-ahead" element={<RoadAhead />} />
             <Route path="/services" element={<Services />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/equipment" element={<Equipment />} />

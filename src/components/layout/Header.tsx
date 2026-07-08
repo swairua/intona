@@ -152,10 +152,10 @@ export function Header() {
 
             {/* Left slide drawer */}
             <motion.div
-              initial={{ x: -100, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              exit={{ x: -100, opacity: 0 }}
-              transition={{ duration: 0.3, ease: 'easeInOut' }}
+              initial={{ x: -400 }}
+              animate={{ x: 0 }}
+              exit={{ x: -400 }}
+              transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
               className="xl:hidden fixed left-0 top-0 h-screen w-80 bg-white z-40 overflow-y-auto shadow-2xl"
             >
               <div className="pt-24 pb-8 px-6 space-y-1">
