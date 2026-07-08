@@ -98,7 +98,7 @@ export function Footer() {
               <Link to="/" className="inline-block mb-6 h-12 sm:h-14">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F6fa2b67a369a4cabbee7a4d7f8558488%2F81d56599669b45b096087813285659d3?format=webp&width=200"
-                  alt="Intona Constructions"
+                  alt="Intona Construction Limited"
                   className="h-full w-auto object-contain"
                 />
               </Link>

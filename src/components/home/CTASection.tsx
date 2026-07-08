@@ -26,7 +26,7 @@ export function CTASection() {
             <span className="text-white underline decoration-white/30 underline-offset-4">Vision</span>?
           </h2>
           <p className="mt-6 sm:mt-8 text-base sm:text-lg md:text-xl text-white/80 leading-relaxed font-light">
-            Partner with Intona Constructions Ltd for your next project.
+            Partner with Intona Construction Limited for your next project.
             Let's discuss how we can bring your vision to life with quality and excellence.
           </p>
           <div className="mt-10 sm:mt-12 flex flex-col sm:flex-row flex-wrap justify-center gap-4 sm:gap-5 w-full sm:w-auto">

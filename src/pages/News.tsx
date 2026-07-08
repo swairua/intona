@@ -20,7 +20,7 @@ export default function News() {
             >
               <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-accent mb-6" style={{ fontFamily: 'var(--font-family-display)' }}>News & Updates</h1>
               <p className="text-base sm:text-lg md:text-xl text-secondary max-w-2xl leading-relaxed">
-                Stay informed with the latest from Intona Constructions Ltd.
+                Stay informed with the latest from Intona Construction Limited.
               </p>
             </motion.div>
           </Container>
