@@ -33,7 +33,7 @@ export function HeroSection() {
       {/* Subtle background accent gradient */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
 
-      <Container className="h-screen flex items-center px-4 py-12 sm:py-16 md:py-0">
+      <Container className="h-screen flex items-center py-12 sm:py-16 md:py-0">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 w-full items-center">
           {/* Left Column - Text Content */}
           <motion.div
@@ -103,7 +103,7 @@ export function HeroSection() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.9, delay: 0.3, ease: 'easeOut' }}
-            className="relative h-96 md:h-full md:min-h-screen order-1 md:order-2 -mx-4 md:mx-0"
+            className="relative h-96 md:h-full md:min-h-screen order-1 md:order-2"
           >
             <div className="absolute inset-0 bg-cover bg-center rounded-lg md:rounded-none overflow-hidden hero-image-container">
               {/* Overlay for better text readability if needed */}
