@@ -47,7 +47,8 @@ export default function Quality() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-white rounded-2xl p-6 border border-border shadow-sm hover:shadow-lg transition-all"
+                whileHover={{ y: -8, scale: 1.02 }}
+                className="bg-white rounded-2xl p-6 border border-t-4 border-t-[var(--color-gold)] border-b border-l border-r border-border shadow-md hover:shadow-2xl transition-all duration-300"
               >
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                   <item.icon className="w-6 h-6 text-primary" />
