@@ -12,7 +12,18 @@ export function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const [activeMega, setActiveMega] = useState<string | null>(null)
+  const [expandedMobileItems, setExpandedMobileItems] = useState<Set<string>>(new Set())
   const location = useLocation()
+
+  const toggleMobileExpand = (label: string) => {
+    const newExpanded = new Set(expandedMobileItems)
+    if (newExpanded.has(label)) {
+      newExpanded.delete(label)
+    } else {
+      newExpanded.add(label)
+    }
+    setExpandedMobileItems(newExpanded)
+  }
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50)
@@ -23,6 +34,7 @@ export function Header() {
   useEffect(() => {
     setMobileOpen(false)
     setActiveMega(null)
+    setExpandedMobileItems(new Set())
   }, [location])
 
   return (
@@ -107,65 +119,128 @@ export function Header() {
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className={cn(
-              'xl:hidden z-50 p-2 rounded-lg transition-colors',
-              scrolled ? 'text-accent' : 'text-white',
+              'xl:hidden z-50 p-2.5 rounded-lg transition-all duration-200 relative group',
+              scrolled
+                ? 'text-accent hover:bg-gray-100'
+                : 'text-white hover:bg-white/10',
             )}
             aria-label="Toggle menu"
+            aria-expanded={mobileOpen}
           >
-            {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            <motion.div
+              animate={{ rotate: mobileOpen ? 90 : 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </motion.div>
           </button>
         </div>
       </Container>
 
       <AnimatePresence>
         {mobileOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
-            className="xl:hidden fixed inset-0 top-0 bg-white z-40 overflow-y-auto"
-          >
-            <div className="pt-24 pb-8 px-6">
-              {NAV_ITEMS.map((item) => (
-                <div key={item.href}>
-                  <Link
-                    to={item.href}
-                    className="block py-4 text-lg font-semibold text-accent border-b border-border"
-                    onClick={() => setMobileOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
-                  {item.children && (
-                    <div className="pl-4">
-                      {item.children.map((child) => (
+          <>
+            {/* Backdrop overlay */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              onClick={() => setMobileOpen(false)}
+              className="xl:hidden fixed inset-0 top-0 bg-black/50 z-30"
+            />
+
+            {/* Left slide drawer */}
+            <motion.div
+              initial={{ x: -100, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: -100, opacity: 0 }}
+              transition={{ duration: 0.3, ease: 'easeInOut' }}
+              className="xl:hidden fixed left-0 top-0 h-screen w-80 bg-white z-40 overflow-y-auto shadow-2xl"
+            >
+              <div className="pt-24 pb-8 px-6 space-y-1">
+                {NAV_ITEMS.map((item) => {
+                  const isExpanded = expandedMobileItems.has(item.label)
+
+                  return (
+                    <div key={item.href}>
+                      <div className="flex items-center gap-2">
                         <Link
-                          key={child.href}
-                          to={child.href}
-                          className="block py-3 text-base text-secondary hover:text-primary"
-                          onClick={() => setMobileOpen(false)}
+                          to={item.href}
+                          className={cn(
+                            'flex-1 py-3 px-4 text-base font-semibold rounded-lg transition-all duration-200',
+                            location.pathname === item.href
+                              ? 'text-primary bg-primary/10'
+                              : 'text-accent hover:text-primary hover:bg-gray-50',
+                          )}
+                          onClick={() => {
+                            if (!item.children) setMobileOpen(false)
+                          }}
                         >
-                          {child.label}
+                          {item.label}
                         </Link>
-                      ))}
+                        {item.children && (
+                          <button
+                            onClick={() => toggleMobileExpand(item.label)}
+                            className="pr-3 text-primary hover:text-primary-dark transition-transform duration-200"
+                            aria-expanded={isExpanded}
+                          >
+                            <motion.div
+                              animate={{ rotate: isExpanded ? 180 : 0 }}
+                              transition={{ duration: 0.2 }}
+                            >
+                              <ChevronDown className="w-5 h-5" />
+                            </motion.div>
+                          </button>
+                        )}
+                      </div>
+
+                      {item.children && isExpanded && (
+                        <motion.div
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: 'auto' }}
+                          exit={{ opacity: 0, height: 0 }}
+                          transition={{ duration: 0.2 }}
+                          className="pl-4 overflow-hidden"
+                        >
+                          {item.children.map((child) => (
+                            <Link
+                              key={child.href}
+                              to={child.href}
+                              className={cn(
+                                'block py-2.5 px-4 text-sm rounded-lg transition-all duration-200',
+                                location.pathname === child.href
+                                  ? 'text-primary font-medium bg-primary/5'
+                                  : 'text-secondary hover:text-primary hover:bg-gray-50',
+                              )}
+                              onClick={() => setMobileOpen(false)}
+                            >
+                              {child.label}
+                            </Link>
+                          ))}
+                        </motion.div>
+                      )}
                     </div>
-                  )}
-                </div>
-              ))}
-              <div className="mt-8 space-y-3">
-                <Link to="/request-quotation" className="block w-full" onClick={() => setMobileOpen(false)}>
+                  )
+                })}
+              </div>
+
+              <div className="border-t border-border mx-6 my-6" />
+
+              <div className="px-6 space-y-3 pb-8">
+                <Link to="/request-quotation" className="block" onClick={() => setMobileOpen(false)}>
                   <Button size="lg" className="w-full shadow-xl shadow-primary/25">
                     Get a Quote
                   </Button>
                 </Link>
-                <a href={`tel:${COMPANY.phone}`} className="block w-full">
+                <a href={`tel:${COMPANY.phone}`} className="block">
                   <Button variant="outline" size="lg" className="w-full">
                     <Phone className="w-4 h-4 mr-2" /> Call Us
                   </Button>
                 </a>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </header>
