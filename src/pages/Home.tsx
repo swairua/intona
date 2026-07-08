@@ -4,6 +4,7 @@ import { StatsCounter } from '../components/home/StatsCounter'
 import { ServicesPreview } from '../components/home/ServicesPreview'
 import { FeaturedProjects } from '../components/home/FeaturedProjects'
 import { TestimonialSlider } from '../components/home/TestimonialSlider'
+import { PartnersSection } from '../components/home/PartnersSection'
 import { CTASection } from '../components/home/CTASection'
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <ServicesPreview />
       <FeaturedProjects />
       <TestimonialSlider />
+      <PartnersSection />
       <CTASection />
     </>
   )
