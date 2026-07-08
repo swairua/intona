@@ -42,3 +42,24 @@ body {
   background: var(--color-primary);
   color: #fff;
 }
+
+@keyframes cardGlow {
+  0% {
+    box-shadow: 0 4px 16px rgba(212, 165, 116, 0);
+  }
+  50% {
+    box-shadow: 0 8px 24px rgba(212, 165, 116, 0.15);
+  }
+  100% {
+    box-shadow: 0 4px 16px rgba(212, 165, 116, 0);
+  }
+}
+
+@keyframes cardShine {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}

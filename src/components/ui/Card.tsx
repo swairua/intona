@@ -35,7 +35,14 @@ export function Card({ children, className, hover = true, delay = 0, variant = '
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-50px' }}
       transition={{ duration: 0.5, delay }}
-      whileHover={hover ? { y: -10, scale: 1.03, transition: { duration: 0.3, ease: 'easeOut' } } : undefined}
+      whileHover={hover ? {
+        y: -12,
+        scale: 1.04,
+        transition: {
+          duration: 0.25,
+          ease: 'easeOut',
+        },
+      } : undefined}
       className={cn(
         'overflow-hidden',
         variantStyles[variant],

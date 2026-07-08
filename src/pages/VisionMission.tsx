@@ -1,5 +1,6 @@
 import { SEO } from '../components/seo/SEO'
 import { Container } from '../components/ui/Container'
+import { Card } from '../components/ui/Card'
 import { motion } from 'framer-motion'
 
 const containerVariants = {
@@ -127,15 +128,16 @@ export default function VisionMission() {
                   icon: '👥',
                 },
               ].map((value, index) => (
-                <motion.div
+                <Card
                   key={index}
-                  variants={itemVariants}
-                  className="bg-gradient-to-br from-primary/5 to-primary/10 p-8 rounded-2xl border border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-lg"
+                  variant="default"
+                  delay={index * 0.1}
+                  className="p-8"
                 >
                   <div className="text-5xl mb-4">{value.icon}</div>
                   <h3 className="text-xl font-bold text-accent mb-3">{value.title}</h3>
                   <p className="text-sm text-secondary/80 leading-relaxed">{value.description}</p>
-                </motion.div>
+                </Card>
               ))}
             </div>
           </motion.div>

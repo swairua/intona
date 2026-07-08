@@ -1,5 +1,6 @@
 import { SEO } from '../components/seo/SEO'
 import { Container } from '../components/ui/Container'
+import { Card } from '../components/ui/Card'
 import { motion } from 'framer-motion'
 
 const itemVariants = {
@@ -98,11 +99,11 @@ export default function StrategicObjectives() {
                 description: 'Cultivate lasting relationships with clients, suppliers, and communities based on mutual success.',
               },
             ].map((obj, idx) => (
-              <motion.div
+              <Card
                 key={idx}
-                variants={itemVariants}
-                whileHover={{ y: -5 }}
-                className="bg-gradient-to-br from-primary/5 to-primary/10 p-6 rounded-2xl border border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-lg"
+                variant="default"
+                delay={idx * 0.1}
+                className="p-6"
               >
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold text-lg flex-shrink-0">
@@ -113,21 +114,21 @@ export default function StrategicObjectives() {
                     <p className="text-sm text-secondary/80">{obj.description}</p>
                   </div>
                 </div>
-              </motion.div>
+              </Card>
             ))}
           </div>
 
-          <motion.div
-            variants={itemVariants}
-            className="mt-16 p-8 bg-gradient-to-r from-primary/5 to-primary/10 rounded-2xl border border-primary/20"
+          <Card
+            variant="premium"
+            className="mt-16 p-8"
           >
             <h3 className="text-2xl font-bold text-accent mb-4">Impact Through Objectives</h3>
             <p className="text-secondary leading-relaxed">
-              By pursuing these nine objectives, we create a virtuous cycle of excellence: quality work attracts more projects, 
-              ethical operations build trust, skilled teams deliver better results, and long-term partnerships ensure sustainability. 
+              By pursuing these nine objectives, we create a virtuous cycle of excellence: quality work attracts more projects,
+              ethical operations build trust, skilled teams deliver better results, and long-term partnerships ensure sustainability.
               Together, these objectives position Intona Constructions as a leader in Kenya's construction industry.
             </p>
-          </motion.div>
+          </Card>
         </motion.div>
       </Container>
     </>

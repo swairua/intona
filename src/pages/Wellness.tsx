@@ -1,5 +1,6 @@
 import { SEO } from '../components/seo/SEO'
 import { Container } from '../components/ui/Container'
+import { Card } from '../components/ui/Card'
 import { motion } from 'framer-motion'
 
 const itemVariants = {
@@ -52,13 +53,13 @@ export default function Wellness() {
 
           {/* HIV & Wellness Policy */}
           <h2 className="text-3xl font-bold text-accent mb-8">HIV & Wellness Policy</h2>
-          <motion.div
-            variants={itemVariants}
-            className="bg-gradient-to-br from-primary/5 to-primary/10 p-8 rounded-2xl border border-primary/20 mb-16"
+          <Card
+            variant="premium"
+            className="mb-16 p-8"
           >
             <h3 className="text-xl font-bold text-accent mb-4">Our Commitment</h3>
             <p className="text-secondary leading-relaxed mb-6">
-              We maintain a comprehensive HIV and wellness policy that ensures non-discrimination, confidentiality, 
+              We maintain a comprehensive HIV and wellness policy that ensures non-discrimination, confidentiality,
               and access to healthcare. All employees are entitled to:
             </p>
             <ul className="space-y-3">
@@ -76,7 +77,7 @@ export default function Wellness() {
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </Card>
 
           {/* Support Initiatives */}
           <h2 className="text-3xl font-bold text-accent mb-8">Staff Support Initiatives</h2>
@@ -123,10 +124,11 @@ export default function Wellness() {
                 ],
               },
             ].map((initiative, idx) => (
-              <motion.div
+              <Card
                 key={idx}
-                variants={itemVariants}
-                className="bg-gradient-to-br from-primary/5 to-primary/10 p-6 rounded-2xl border border-primary/20 hover:border-primary/40 transition-all"
+                variant="default"
+                delay={idx * 0.1}
+                className="p-6"
               >
                 <div className="text-4xl mb-4">{initiative.icon}</div>
                 <h3 className="text-xl font-bold text-accent mb-4">{initiative.title}</h3>
@@ -138,20 +140,20 @@ export default function Wellness() {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </Card>
             ))}
           </div>
 
-          <motion.div
-            variants={itemVariants}
-            className="p-8 bg-gradient-to-r from-primary/5 to-primary/10 rounded-2xl border border-primary/20"
+          <Card
+            variant="premium"
+            className="p-8"
           >
             <h3 className="text-2xl font-bold text-accent mb-4">Wellness for All</h3>
             <p className="text-secondary leading-relaxed">
-              We believe that a healthy workforce is a productive and engaged workforce. By investing in comprehensive 
+              We believe that a healthy workforce is a productive and engaged workforce. By investing in comprehensive
               wellness programs, we create an inclusive workplace where every team member can thrive both professionally and personally.
             </p>
-          </motion.div>
+          </Card>
         </motion.div>
       </Container>
     </>

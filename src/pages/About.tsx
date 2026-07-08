@@ -1,6 +1,7 @@
 import { SEO } from '../components/seo/SEO'
 import { Section } from '../components/ui/Section'
 import { Container } from '../components/ui/Container'
+import { Card } from '../components/ui/Card'
 import { CompanyHistory } from '../components/about/CompanyHistory'
 import { MissionVision } from '../components/about/MissionVision'
 import { CoreValues } from '../components/about/CoreValues'
@@ -37,22 +38,17 @@ export function WhyChooseUs() {
           </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {REASONS.map((reason, i) => (
-              <motion.div
-                key={reason.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="flex gap-3 sm:gap-4 p-4 sm:p-6 rounded-2xl bg-surface hover:bg-primary/5 transition-colors"
-              >
-                <div className="w-10 sm:w-12 h-10 sm:h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
-                  <reason.icon className="w-5 sm:w-6 h-5 sm:h-6 text-primary" />
+              <Card key={reason.title} variant="default" delay={i * 0.1}>
+                <div className="flex gap-3 sm:gap-4 p-4 sm:p-6">
+                  <div className="w-10 sm:w-12 h-10 sm:h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+                    <reason.icon className="w-5 sm:w-6 h-5 sm:h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-accent text-sm sm:text-base mb-1">{reason.title}</h3>
+                    <p className="text-xs sm:text-sm text-secondary">{reason.description}</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-bold text-accent text-sm sm:text-base mb-1">{reason.title}</h3>
-                  <p className="text-xs sm:text-sm text-secondary">{reason.description}</p>
-                </div>
-              </motion.div>
+              </Card>
             ))}
           </div>
         </div>

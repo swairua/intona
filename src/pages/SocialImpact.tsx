@@ -1,5 +1,6 @@
 import { SEO } from '../components/seo/SEO'
 import { Container } from '../components/ui/Container'
+import { Card } from '../components/ui/Card'
 import { motion } from 'framer-motion'
 
 const itemVariants = {
@@ -85,15 +86,16 @@ export default function SocialImpact() {
                 description: 'We listen and engage with communities. Ongoing stakeholder dialogue ensures our projects benefit and respect local interests.',
               },
             ].map((principle, idx) => (
-              <motion.div
+              <Card
                 key={idx}
-                variants={itemVariants}
-                className="bg-gradient-to-br from-primary/5 to-primary/10 p-6 rounded-2xl border border-primary/20 hover:border-primary/40 transition-all"
+                variant="default"
+                delay={idx * 0.1}
+                className="p-6"
               >
                 <div className="text-4xl mb-4">{principle.icon}</div>
                 <h3 className="text-xl font-bold text-accent mb-3">{principle.title}</h3>
                 <p className="text-sm text-secondary leading-relaxed">{principle.description}</p>
-              </motion.div>
+              </Card>
             ))}
           </div>
 
@@ -133,17 +135,17 @@ export default function SocialImpact() {
             ))}
           </div>
 
-          <motion.div
-            variants={itemVariants}
-            className="p-8 bg-gradient-to-r from-primary/5 to-primary/10 rounded-2xl border border-primary/20"
+          <Card
+            variant="premium"
+            className="p-8"
           >
             <h3 className="text-2xl font-bold text-accent mb-4">Committed to Shared Prosperity</h3>
             <p className="text-secondary leading-relaxed">
-              We believe that sustainable business growth comes from creating value for all stakeholders. By empowering local 
-              communities, developing human potential, and contributing to Kenya's development, we build a stronger society 
+              We believe that sustainable business growth comes from creating value for all stakeholders. By empowering local
+              communities, developing human potential, and contributing to Kenya's development, we build a stronger society
               and a more resilient business for the future.
             </p>
-          </motion.div>
+          </Card>
         </motion.div>
       </Container>
     </>
