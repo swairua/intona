@@ -23,14 +23,14 @@ export function Heading({ title, subtitle, centered = true, light = false, class
       )}
     >
       <h2 className={cn(
-        'text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight',
+        'text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight',
         light ? 'text-white' : 'text-accent',
       )}>
         {title}
       </h2>
       {subtitle && (
         <p className={cn(
-          'mt-4 max-w-3xl mx-auto text-lg md:text-xl leading-relaxed',
+          'mt-4 max-w-3xl mx-auto text-base sm:text-lg md:text-xl leading-relaxed',
           light ? 'text-gray-300' : 'text-secondary',
         )}>
           {subtitle}

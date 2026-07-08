@@ -37,8 +37,8 @@ export default function Services() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-4xl md:text-6xl font-black text-accent mb-4">Our Services</h1>
-              <p className="text-xl text-secondary max-w-2xl">
+              <h1 className="text-3xl sm:text-4xl md:text-6xl font-black text-accent mb-4">Our Services</h1>
+              <p className="text-base sm:text-lg md:text-xl text-secondary max-w-2xl">
                 End-to-end construction and engineering solutions tailored to your project needs.
               </p>
             </motion.div>
@@ -52,14 +52,14 @@ export default function Services() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="flex flex-wrap justify-center gap-2 mb-12"
+            className="flex flex-wrap justify-center gap-2 mb-8 sm:mb-12"
           >
             {SERVICE_CATEGORIES.map((cat) => (
               <button
                 key={cat.id}
                 onClick={() => setActive(cat.id)}
                 className={cn(
-                  'px-5 py-2.5 rounded-xl text-sm font-medium transition-all',
+                  'px-4 sm:px-5 py-2 sm:py-2.5 rounded-lg sm:rounded-xl text-xs sm:text-sm font-medium transition-all',
                   active === cat.id
                     ? 'bg-primary text-white shadow-lg shadow-primary/25'
                     : 'bg-surface text-secondary hover:bg-primary/10 hover:text-primary',

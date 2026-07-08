@@ -34,8 +34,8 @@ export default function Safety() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-4xl md:text-6xl font-black text-accent mb-4">Health & Safety</h1>
-              <p className="text-xl text-secondary max-w-2xl">
+              <h1 className="text-3xl sm:text-4xl md:text-6xl font-black text-accent mb-4">Health & Safety</h1>
+              <p className="text-base sm:text-lg md:text-xl text-secondary max-w-2xl">
                 Safety is not a priority — it's a value embedded in everything we do.
               </p>
             </motion.div>
@@ -70,7 +70,7 @@ export default function Safety() {
       <Section bgColor="bg-surface">
         <Container>
           <Heading title="Safety Performance" subtitle="Our commitment to zero harm — measured, tracked and improved." />
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6">
             {STATS.map((stat, i) => (
               <motion.div
                 key={stat.label}
@@ -78,10 +78,10 @@ export default function Safety() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-white rounded-2xl p-8 text-center border border-border shadow-sm"
+                className="bg-white rounded-2xl p-4 sm:p-8 text-center border border-border shadow-sm"
               >
-                <div className="text-3xl md:text-4xl font-black text-primary">{stat.value}</div>
-                <div className="mt-2 text-sm text-secondary font-medium">{stat.label}</div>
+                <div className="text-2xl sm:text-3xl md:text-4xl font-black text-primary">{stat.value}</div>
+                <div className="mt-1 sm:mt-2 text-xs sm:text-sm text-secondary font-medium">{stat.label}</div>
               </motion.div>
             ))}
           </div>
