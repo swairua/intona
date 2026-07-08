@@ -51,16 +51,16 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4"
+            className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 items-start sm:items-center"
           >
             <Link to="/request-quotation" className="w-full sm:w-auto">
-              <Button size="lg" className="w-full shadow-2xl shadow-primary/30 group">
+              <Button size="lg" className="w-full sm:w-auto shadow-2xl shadow-primary/30 group">
                 Get a Quote
                 <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
             <Link to="/projects" className="w-full sm:w-auto">
-              <Button variant="outline" size="lg" className="w-full border-white/30 text-white hover:bg-white hover:text-accent">
+              <Button variant="outline" size="lg" className="w-full sm:w-auto border-white/30 text-white hover:bg-white hover:text-accent">
                 View Projects
               </Button>
             </Link>

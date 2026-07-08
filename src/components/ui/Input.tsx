@@ -25,8 +25,8 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
           ref={ref}
           id={id}
           className={cn(
-            'w-full px-4 py-3 rounded-xl border border-border bg-white text-accent placeholder:text-secondary/50 transition-all duration-200',
-            'focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20',
+            'w-full px-4 py-3 rounded-xl border border-border bg-white text-accent placeholder:text-secondary/50 transition-all duration-300',
+            'focus:outline-none focus:border-[var(--color-gold)] focus:ring-2 focus:ring-[var(--color-gold)]/30 focus:shadow-md',
             error && 'border-red-500 focus:border-red-500 focus:ring-red-500/20',
             className,
           )}
@@ -54,8 +54,8 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
           id={id}
           rows={4}
           className={cn(
-            'w-full px-4 py-3 rounded-xl border border-border bg-white text-accent placeholder:text-secondary/50 transition-all duration-200 resize-none',
-            'focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20',
+            'w-full px-4 py-3 rounded-xl border border-border bg-white text-accent placeholder:text-secondary/50 transition-all duration-300 resize-none',
+            'focus:outline-none focus:border-[var(--color-gold)] focus:ring-2 focus:ring-[var(--color-gold)]/30 focus:shadow-md',
             error && 'border-red-500 focus:border-red-500 focus:ring-red-500/20',
             className,
           )}

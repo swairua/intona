@@ -38,11 +38,11 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       </div>
       <div className="space-y-3">
         <Badge variant="primary" className="text-xs">{project.category}</Badge>
-        <div className="grid grid-cols-2 gap-2 text-xs text-secondary">
-          <span className="flex items-center gap-1"><MapPin className="w-3 h-3 flex-shrink-0" /> <span className="truncate">{project.location}</span></span>
-          <span className="flex items-center gap-1"><Calendar className="w-3 h-3 flex-shrink-0" /> <span className="truncate">{project.duration}</span></span>
-          <span className="flex items-center gap-1"><User className="w-3 h-3 flex-shrink-0" /> <span className="truncate">{project.client}</span></span>
-          <span className="flex items-center gap-1"><DollarSign className="w-3 h-3 flex-shrink-0" /> <span className="truncate">{project.budget}</span></span>
+        <div className="grid grid-cols-2 gap-2 text-xs sm:text-sm text-secondary">
+          <span className="flex items-center gap-1 min-w-0"><MapPin className="w-3 h-3 flex-shrink-0" /> <span className="truncate">{project.location}</span></span>
+          <span className="flex items-center gap-1 min-w-0"><Calendar className="w-3 h-3 flex-shrink-0" /> <span className="truncate">{project.duration}</span></span>
+          <span className="flex items-center gap-1 min-w-0"><User className="w-3 h-3 flex-shrink-0" /> <span className="truncate">{project.client}</span></span>
+          <span className="flex items-center gap-1 min-w-0"><DollarSign className="w-3 h-3 flex-shrink-0" /> <span className="truncate">{project.budget}</span></span>
         </div>
         <p className="text-xs sm:text-sm text-secondary leading-relaxed line-clamp-2">{project.description}</p>
       </div>

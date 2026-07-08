@@ -149,9 +149,9 @@ export function Header() {
               animate={{ x: 0 }}
               exit={{ x: -400 }}
               transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
-              className="xl:hidden fixed left-0 top-0 h-screen w-80 bg-white z-40 overflow-y-auto shadow-2xl"
+              className="xl:hidden fixed left-0 top-0 h-screen w-72 sm:w-80 bg-white z-40 overflow-y-auto shadow-2xl"
             >
-              <div className="pt-24 pb-8 px-6 space-y-1">
+              <div className="pt-24 pb-8 px-4 sm:px-6 space-y-2">
                 {NAV_ITEMS.map((item) => {
                   const isExpanded = expandedMobileItems.has(item.label)
 
@@ -175,8 +175,9 @@ export function Header() {
                         {item.children && (
                           <button
                             onClick={() => toggleMobileExpand(item.label)}
-                            className="pr-3 text-primary hover:text-primary-dark transition-transform duration-200"
+                            className="pr-3 text-primary hover:text-primary-dark transition-transform duration-200 p-2"
                             aria-expanded={isExpanded}
+                            aria-label={`Toggle ${item.label} submenu`}
                           >
                             <motion.div
                               animate={{ rotate: isExpanded ? 180 : 0 }}
@@ -194,7 +195,7 @@ export function Header() {
                           animate={{ opacity: 1, height: 'auto' }}
                           exit={{ opacity: 0, height: 0 }}
                           transition={{ duration: 0.2 }}
-                          className="pl-4 overflow-hidden"
+                          className="pl-2 sm:pl-4 overflow-hidden space-y-1"
                         >
                           {item.children.map((child) => (
                             <Link
@@ -218,9 +219,9 @@ export function Header() {
                 })}
               </div>
 
-              <div className="border-t border-border mx-6 my-6" />
+              <div className="border-t border-border mx-4 sm:mx-6 my-6" />
 
-              <div className="px-6 space-y-3 pb-8">
+              <div className="px-4 sm:px-6 space-y-3 pb-8">
                 <Link to="/request-quotation" className="block" onClick={() => setMobileOpen(false)}>
                   <Button size="lg" className="w-full shadow-xl shadow-primary/25">
                     Get a Quote
