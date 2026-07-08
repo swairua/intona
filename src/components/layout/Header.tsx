@@ -48,19 +48,12 @@ export function Header() {
     >
       <Container>
         <div className="flex items-center justify-between h-20 md:h-24">
-          <Link to="/" className="flex items-center gap-2 z-50">
-            <span className={cn(
-              'text-2xl md:text-3xl font-black tracking-tight transition-colors',
-              scrolled ? 'text-accent' : 'text-white',
-            )}>
-              INTONA
-            </span>
-            <span className={cn(
-              'text-xs font-medium tracking-widest uppercase hidden sm:block transition-colors',
-              scrolled ? 'text-secondary' : 'text-white/80',
-            )}>
-              Constructions
-            </span>
+          <Link to="/" className="flex items-center z-50 h-14">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2F6fa2b67a369a4cabbee7a4d7f8558488%2F81d56599669b45b096087813285659d3?format=webp&width=200"
+              alt="Intona Constructions"
+              className="h-12 w-auto object-contain"
+            />
           </Link>
 
           <nav className="hidden xl:flex items-center gap-1">

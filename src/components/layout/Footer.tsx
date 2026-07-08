@@ -16,9 +16,12 @@ export function Footer() {
       <Container className="py-16 md:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8">
           <div className="lg:col-span-2">
-            <Link to="/" className="inline-flex items-center gap-3 mb-6">
-              <span className="text-2xl font-black tracking-tight text-white">INTONA</span>
-              <span className="text-xs font-medium tracking-widest uppercase text-gray-400">Constructions</span>
+            <Link to="/" className="inline-block mb-6 h-16">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F6fa2b67a369a4cabbee7a4d7f8558488%2F81d56599669b45b096087813285659d3?format=webp&width=200"
+                alt="Intona Constructions"
+                className="h-full w-auto object-contain"
+              />
             </Link>
             <p className="text-gray-400 leading-relaxed mb-6 max-w-md">
               {COMPANY.description}
