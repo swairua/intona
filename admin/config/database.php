@@ -1,10 +1,11 @@
 <?php
-define('DB_HOST', 'localhost');
-define('DB_PORT', 3308);
-define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_NAME', 'intona');
+defined('DB_HOST') or define('DB_HOST', 'localhost');
+defined('DB_PORT') or define('DB_PORT', 3308);
+defined('DB_USER') or define('DB_USER', 'root');
+defined('DB_PASS') or define('DB_PASS', '');
+defined('DB_NAME') or define('DB_NAME', 'intona');
 
+if (!function_exists('getDb')) {
 function getDb(): mysqli {
   static $conn = null;
   if ($conn === null) {
@@ -15,4 +16,5 @@ function getDb(): mysqli {
     $conn->set_charset('utf8mb4');
   }
   return $conn;
+}
 }
