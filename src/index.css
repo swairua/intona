@@ -21,12 +21,6 @@
   --shadow-premium-gold: 0 8px 24px rgba(212, 165, 116, 0.15);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -106,14 +100,6 @@ img {
 
 .shadow-premium-lg {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-}
-
-/* White Space Enhancements */
-@media (min-width: 768px) {
-  section {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
-  }
 }
 
 /* Responsive Typography */
